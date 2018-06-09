@@ -2,4 +2,6 @@
     <string name="app_name">My Application</string>
     <string name="title_activity_test1">test1</string>
     <string name="title_activity_testshuan">testshuan</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_zzzzzz">zzzzzz</string>
 </resources>
