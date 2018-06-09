@@ -10,7 +10,9 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<
+<<<
+
+    < app:layout_constraintStart_toStartOf="parent" /><<
 
     < HEAD
         android:layout_marginBottom="345dp"
@@ -34,7 +36,9 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-<<<<<<< HEAD
+<<<
+
+    <<< HEAD
         android:text="Button"
         tools:layout_editor_absoluteX="67dp"
         tools:layout_editor_absoluteY="217dp" />
