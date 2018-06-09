@@ -8,4 +8,19 @@
     tools:context=".test"
     tools:showIn="@layout/activity_test">
 
+    <Button
+        android:id="@+id/shuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="shuan"
+        tools:layout_editor_absoluteX="96dp"
+        tools:layout_editor_absoluteY="160dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="chih"
+        tools:layout_editor_absoluteX="222dp"
+        tools:layout_editor_absoluteY="41dp" />
 </android.support.constraint.ConstraintLayout>
