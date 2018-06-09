@@ -10,15 +10,33 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:layout_marginBottom="345dp"
+        android:layout_marginEnd="165dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="118dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+=======
         android:text="chih"
         tools:layout_editor_absoluteX="66dp"
         tools:layout_editor_absoluteY="61dp" />
+>>>>>>> 611ae5ea490da9262f5ae144f8e295c72fa35ad5
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
+        android:text="Button"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="217dp" />
+=======
         android:text="shuan"
         tools:layout_editor_absoluteX="229dp"
         tools:layout_editor_absoluteY="177dp" />
+>>>>>>> 611ae5ea490da9262f5ae144f8e295c72fa35ad5
 </android.support.constraint.ConstraintLayout>
