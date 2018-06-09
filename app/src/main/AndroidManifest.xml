@@ -16,8 +16,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".bus_work" />
         <activity android:name=".Yule_home"></activity>
+=======
+<<<<<<< HEAD
+        <activity
+            android:name=".TopTitle"
+            android:label="@string/title_activity_top_title"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+=======
+        <activity android:name=".bus_work"></activity>
+>>>>>>> a8e45edfb890933fb4a8927521f0a06b33ab869b
+>>>>>>> 2d0909cd4be07c9f763a4ab55742389a0b5d0940
     </application>
 
 </manifest>

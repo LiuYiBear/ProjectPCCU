@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    tools:layout_editor_absoluteY="25dp">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".TopTitle"
+    tools:showIn="@layout/activity_top_title">
 
-
-    >
 </android.support.constraint.ConstraintLayout>
