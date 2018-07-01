@@ -23,13 +23,28 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <Button
-
-            android:id="@+id/menuGameStar"
-            android:layout_width="wrap_content"
-            android:layout_height="65dp"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:text="輪盤開始" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/storeSelect"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="店家選擇" />
+
+            <Button
+
+                android:id="@+id/menuGameStar"
+                android:layout_width="wrap_content"
+                android:layout_height="65dp"
+                android:layout_weight="1"
+                android:text="輪盤開始" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>
