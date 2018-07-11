@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".yule" />
-        <activity android:name=".home_page"></activity>
+        <activity android:name=".home_page" />
+        <activity android:name=".set" />
+        <activity android:name=".traffic"></activity>
     </application>
 
 </manifest>
