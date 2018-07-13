@@ -8,8 +8,7 @@
         android:id="@+id/imageButton3"
         android:layout_width="76dp"
         android:layout_height="48dp"
-        android:layout_weight="1"
-        app:srcCompat="@drawable/yule1" />
+        android:layout_weight="1" />
 
     <SearchView
         android:layout_width="238dp"

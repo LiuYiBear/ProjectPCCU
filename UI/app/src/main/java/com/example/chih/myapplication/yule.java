@@ -14,6 +14,7 @@ public class yule extends AppCompatActivity {
         setContentView(R.layout.activity_yule);
 
         ImageButton imageButton=(ImageButton) findViewById(R.id.imageButton3);
+        imageButton.setBackgroundResource(R.drawable.eat1);
 
         ImageButton nextig =(ImageButton)findViewById(R.id.imageButton3);
         nextig.setOnClickListener(new View.OnClickListener() {
