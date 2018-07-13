@@ -12,13 +12,13 @@
         />
     <include
         android:id="@+id/main21"
-        layout="@layout/eat_alltime_title"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         />
     <include
         android:id="@+id/main22"
-        layout="@layout/eat_store_allview"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -39,7 +39,8 @@
         <include
             android:id="@+id/main4"
             layout="@layout/yule_all_thing"
-            android:layout_width="match_parent" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
 
     </LinearLayout>
 

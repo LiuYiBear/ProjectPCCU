@@ -6,24 +6,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class traffic extends AppCompatActivity {
+public class traffic_taxi extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.traffic);
+        setContentView(R.layout.traffic_taxi);
 
+        Button button1=(Button) findViewById(R.id.back);
 
-        Button button1=(Button) findViewById(R.id.button17);
-
-        Button nextig1 =( Button)findViewById(R.id.button17);
+        Button nextig1 =( Button)findViewById(R.id.back);
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
-                intent.setClass(traffic.this,traffic_taxi.class);
+                intent.setClass(traffic_taxi.this,traffic.class);
                 startActivity(intent);
             }
         });
     }
 }
+
