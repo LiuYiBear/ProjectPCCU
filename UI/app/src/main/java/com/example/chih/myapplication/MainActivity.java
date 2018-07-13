@@ -13,22 +13,34 @@ import android.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home_page);
-        Button button=(Button) findViewById(R.id.button12);//title 置換圖片功能
-//
-        Button nextig =(Button)findViewById(R.id.button12);
-        nextig.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setClass(MainActivity.this,yule.class);
-                startActivity(intent);
-            }
-        });
+
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_home_page);
+
+            Button button=(Button) findViewById(R.id.button10);
+
+            Button nextig =( Button)findViewById(R.id.button10);
+            nextig.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent();
+                    intent.setClass(MainActivity.this,eat.class);
+                    startActivity(intent);
+                }
+            });
+            Button button1=(Button) findViewById(R.id.button12);
+
+            Button nextig1 =( Button)findViewById(R.id.button12);
+            nextig1.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent();
+                    intent.setClass(MainActivity.this,yule.class);
+                    startActivity(intent);
+                }
+            });
+        }
+
     }
-
-
-}
