@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 public class yule extends AppCompatActivity {
@@ -11,17 +12,14 @@ public class yule extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_yule);
-
-        ImageButton imageButton=(ImageButton) findViewById(R.id.imageButton3);
-        imageButton.setBackgroundResource(R.drawable.eat1);
-
-        ImageButton nextig =(ImageButton)findViewById(R.id.imageButton3);
-        nextig.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.yule);
+        Button nextig=(Button)findViewById(R.id.button14);
+        nextig.setBackgroundResource(R.drawable.yule1);//title 置換圖片功能
+        nextig.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent intent=new Intent();
-                intent.setClass(yule.this,home_page.class);
+                intent.setClass(yule.this,MainActivity.class);
                 startActivity(intent);
             }
         });

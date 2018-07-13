@@ -20,9 +20,10 @@
 
         <include
             android:id="@+id/main3"
-            layout="@layout/yule_title"
+            layout="@layout/toptitle"
             android:layout_width="match_parent"
             android:layout_height="94dp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -39,36 +40,10 @@
         <include
             android:id="@+id/main4"
             layout="@layout/yule_all_thing"
-            android:layout_width="match_parent" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="422dp"
-        android:layout_marginTop="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="0dp">
-
-        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="485dp">
+            android:layout_height="wrap_content"
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <include
-                    android:id="@+id/main5"
-                    layout="@layout/yule_all_store"
-                    android:layout_width="match_parent"
-                    android:layout_height="413dp" />
-            </LinearLayout>
-        </ScrollView>
-
+            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
