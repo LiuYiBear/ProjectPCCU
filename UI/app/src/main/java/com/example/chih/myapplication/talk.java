@@ -11,7 +11,7 @@ public class talk extends AppCompatActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.yule);
+        setContentView(R.layout.talk_data);
 //        Button backig=(Button)findViewById(R.id.bt14);
 //        backig.setBackgroundResource(R.drawable.talk);//title 置換圖片功能
 //        backig.setOnClickListener(new View.OnClickListener(){
