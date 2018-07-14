@@ -30,13 +30,8 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-<<<<<<< HEAD
 
-            Button button1=(Button) findViewById(R.id.button12);
-=======
             Button button1=(Button) findViewById(R.id.bt12);
->>>>>>> 554ae768086eec0141c7e7e66b54ec1e9a3b82e3
-
             Button nextig1 =( Button)findViewById(R.id.bt12);
             nextig1.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -47,15 +42,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-<<<<<<< HEAD
-            Button button2=(Button) findViewById(R.id.button11);
 
-            Button nextig2 =( Button)findViewById(R.id.button11);
-=======
             Button button2=(Button) findViewById(R.id.bt11);
 
             Button nextig2 =( Button)findViewById(R.id.bt11);
->>>>>>> 554ae768086eec0141c7e7e66b54ec1e9a3b82e3
+
             nextig2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -65,15 +56,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-<<<<<<< HEAD
-            Button button3=(Button) findViewById(R.id.button13);
 
-            Button nextig3 =( Button)findViewById(R.id.button13);
-=======
             Button button3=(Button) findViewById(R.id.bt13);
 
             Button nextig3 =( Button)findViewById(R.id.bt13);
->>>>>>> 554ae768086eec0141c7e7e66b54ec1e9a3b82e3
+
             nextig3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -83,8 +70,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-<<<<<<< HEAD
-=======
+
             Button button5=(Button) findViewById(R.id.bt14);
 
             Button nextig5 =( Button)findViewById(R.id.bt14);
@@ -96,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
->>>>>>> 554ae768086eec0141c7e7e66b54ec1e9a3b82e3
+
         }
 
     }
