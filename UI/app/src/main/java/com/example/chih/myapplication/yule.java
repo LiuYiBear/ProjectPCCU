@@ -12,9 +12,9 @@ public class yule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yule);
-        Button nextig=(Button)findViewById(R.id.bt14);
-        nextig.setBackgroundResource(R.drawable.yule1);//title 置換圖片功能
-        nextig.setOnClickListener(new View.OnClickListener(){
+        Button backig=(Button)findViewById(R.id.bt14);
+        backig.setBackgroundResource(R.drawable.yule1);//title 置換圖片功能
+        backig.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 Intent intent=new Intent();

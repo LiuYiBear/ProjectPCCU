@@ -15,14 +15,13 @@ public class traffic extends AppCompatActivity {
 
 
 
-        Button button=(Button) findViewById(R.id.back);
-
-        Button nextig =( Button)findViewById(R.id.back);
-        nextig.setOnClickListener(new View.OnClickListener() {
+        Button backig=(Button) findViewById(R.id.bt14);
+        backig.setBackgroundResource(R.drawable.traffic1);//title 置換圖片功能
+        backig.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v) {
+            public void onClick(View v){
                 Intent intent=new Intent();
-                intent.setClass(traffic.this,home_page.class);
+                intent.setClass(traffic.this,MainActivity.class);
                 startActivity(intent);
             }
         });

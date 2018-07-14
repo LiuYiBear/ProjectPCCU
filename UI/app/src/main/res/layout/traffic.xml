@@ -19,7 +19,7 @@
 
         <include
             android:id="@+id/main3"
-            layout="@layout/toptitle_back"
+            layout="@layout/toptitle"
             android:layout_width="match_parent"
             android:layout_height="94dp" />
     </LinearLayout>

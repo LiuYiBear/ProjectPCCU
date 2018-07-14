@@ -20,13 +20,12 @@ public class MainActivity extends AppCompatActivity {
             setContentView(R.layout.activity_home_page);
 
             Button button=(Button) findViewById(R.id.bt10);
-
             Button nextig =( Button)findViewById(R.id.bt10);
             nextig.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent();
-                    intent.setClass(MainActivity.this,MainActivity.class);
+                    intent.setClass(MainActivity.this,eat.class);
                     startActivity(intent);
                 }
             });
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button button3=(Button) findViewById(R.id.bt13);
-
             Button nextig3 =( Button)findViewById(R.id.bt13);
 
             nextig3.setOnClickListener(new View.OnClickListener() {
@@ -72,13 +70,12 @@ public class MainActivity extends AppCompatActivity {
 
 
             Button button5=(Button) findViewById(R.id.bt14);
-
             Button nextig5 =( Button)findViewById(R.id.bt14);
             nextig5.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent();
-                    intent.setClass(MainActivity.this,forum_article.class);
+                    intent.setClass(MainActivity.this,talk.class);
                     startActivity(intent);
                 }
             });

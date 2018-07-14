@@ -5,11 +5,5 @@ import android.os.Bundle;
 
 public class forum_article extends AppCompatActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.forum_article);
 
-
-    }
 }
