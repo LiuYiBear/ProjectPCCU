@@ -1,16 +1,17 @@
 package com.example.chih.myapplication;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-
 
 public class eat extends AppCompatActivity {
 
-//    @Override
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.eat);
+
+    }
+    //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //          super.onCreate(savedInstanceState);
 //        setContentView(R.layout.yule);

@@ -13,7 +13,7 @@ public class home_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
-        Button button=(Button) findViewById(R.id.button10);
+       /* Button button=(Button) findViewById(R.id.bt10);
 
         Button nextig =( Button)findViewById(R.id.button10);
         nextig.setOnClickListener(new View.OnClickListener() {
@@ -25,7 +25,7 @@ public class home_page extends AppCompatActivity {
             }
         });
 
-        Button button1=(Button) findViewById(R.id.button12);
+       /* Button button1=(Button) findViewById(R.id.button12);
 
         Button nextig1 =( Button)findViewById(R.id.button12);
         nextig1.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +59,7 @@ public class home_page extends AppCompatActivity {
                 intent.setClass(home_page.this,set.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
     }
 

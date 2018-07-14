@@ -26,4 +26,3 @@ public class traffic_taxi extends AppCompatActivity {
         });
     }
 }
-

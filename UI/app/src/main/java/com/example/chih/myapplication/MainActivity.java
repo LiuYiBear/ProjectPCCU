@@ -19,9 +19,9 @@ public class MainActivity extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_home_page);
 
-            Button button=(Button) findViewById(R.id.button10);
+            Button button=(Button) findViewById(R.id.bt10);
 
-            Button nextig =( Button)findViewById(R.id.button10);
+            Button nextig =( Button)findViewById(R.id.bt10);
             nextig.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -30,14 +30,50 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             });
-            Button button1=(Button) findViewById(R.id.button12);
+            Button button1=(Button) findViewById(R.id.bt12);
 
-            Button nextig1 =( Button)findViewById(R.id.button12);
+            Button nextig1 =( Button)findViewById(R.id.bt12);
             nextig1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent=new Intent();
                     intent.setClass(MainActivity.this,yule.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button button2=(Button) findViewById(R.id.bt11);
+
+            Button nextig2 =( Button)findViewById(R.id.bt11);
+            nextig2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent();
+                    intent.setClass(MainActivity.this,traffic.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button button3=(Button) findViewById(R.id.bt13);
+
+            Button nextig3 =( Button)findViewById(R.id.bt13);
+            nextig3.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent();
+                    intent.setClass(MainActivity.this,set.class);
+                    startActivity(intent);
+                }
+            });
+
+            Button button5=(Button) findViewById(R.id.bt14);
+
+            Button nextig5 =( Button)findViewById(R.id.bt14);
+            nextig5.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent=new Intent();
+                    intent.setClass(MainActivity.this,forum_article.class);
                     startActivity(intent);
                 }
             });
