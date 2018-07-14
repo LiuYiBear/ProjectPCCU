@@ -24,6 +24,7 @@ public class home_page extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
         Button button1=(Button) findViewById(R.id.button12);
 
         Button nextig1 =( Button)findViewById(R.id.button12);
@@ -35,6 +36,31 @@ public class home_page extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button button2=(Button) findViewById(R.id.button11);
+
+        Button nextig2 =( Button)findViewById(R.id.button11);
+        nextig2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(home_page.this,traffic.class);
+                startActivity(intent);
+            }
+        });
+
+        Button button3=(Button) findViewById(R.id.button13);
+
+        Button nextig3 =( Button)findViewById(R.id.button13);
+        nextig3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(home_page.this,set.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
 
