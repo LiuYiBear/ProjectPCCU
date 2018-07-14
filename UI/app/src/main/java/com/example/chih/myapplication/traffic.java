@@ -14,9 +14,24 @@ public class traffic extends AppCompatActivity {
         setContentView(R.layout.traffic);
 
 
-        Button button1=(Button) findViewById(R.id.button17);
 
-        Button nextig1 =( Button)findViewById(R.id.button17);
+        Button button=(Button) findViewById(R.id.back);
+
+        Button nextig =( Button)findViewById(R.id.back);
+        nextig.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(traffic.this,home_page.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+        Button button1=(Button) findViewById(R.id.btn17);
+
+        Button nextig1 =( Button)findViewById(R.id.btn17);
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

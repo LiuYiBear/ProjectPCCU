@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 public class yule extends AppCompatActivity {
 
@@ -13,7 +12,7 @@ public class yule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yule);
-        Button nextig=(Button)findViewById(R.id.button14);
+        Button nextig=(Button)findViewById(R.id.bt14);
         nextig.setBackgroundResource(R.drawable.yule1);//title 置換圖片功能
         nextig.setOnClickListener(new View.OnClickListener(){
             @Override

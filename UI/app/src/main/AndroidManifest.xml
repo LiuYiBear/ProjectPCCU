@@ -19,7 +19,13 @@
         <activity android:name=".yule" />
         <activity android:name=".home_page" />
         <activity android:name=".set" />
-        <activity android:name=".traffic"></activity>
+        <activity android:name=".traffic" />
+        <activity android:name=".eat" />
+        <activity android:name=".traffic_taxi" />
+        <activity android:name=".set_about" />
+        <activity android:name=".set_information" />
+        <activity android:name=".forum_article" />
+        <activity android:name=".set_backgroundtheme"></activity>
     </application>
 
 </manifest>

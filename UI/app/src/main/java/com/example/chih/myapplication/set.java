@@ -15,10 +15,10 @@ public class set extends AppCompatActivity {
         setContentView(R.layout.set);
 
         //跳轉到說明
-        Button button1=(Button) findViewById(R.id.button);
+        Button button=(Button) findViewById(R.id.btn_1);
 
-        Button nextig1 =( Button)findViewById(R.id.button);
-        nextig1.setOnClickListener(new View.OnClickListener() {
+        Button nextig =( Button)findViewById(R.id.btn_1);
+        nextig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
@@ -28,9 +28,9 @@ public class set extends AppCompatActivity {
         });
 
         //跳轉到關於
-        Button button2=(Button) findViewById(R.id.button2);
+        Button button2=(Button) findViewById(R.id.btn_2);
 
-        Button nextig2 =( Button)findViewById(R.id.button2);
+        Button nextig2 =( Button)findViewById(R.id.btn_2);
         nextig2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -40,9 +40,9 @@ public class set extends AppCompatActivity {
             }
         });
         //跳轉到個人資料
-        Button button3=(Button) findViewById(R.id.button3);
+        Button button3=(Button) findViewById(R.id.btn_3);
 
-        Button nextig3 =( Button)findViewById(R.id.button3);
+        Button nextig3 =( Button)findViewById(R.id.btn_3);
         nextig3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -53,9 +53,9 @@ public class set extends AppCompatActivity {
         });
 
         //跳轉到布景
-        Button button4=(Button) findViewById(R.id.button4);
+        Button button4=(Button) findViewById(R.id.btn_4);
 
-        Button nextig4 =( Button)findViewById(R.id.button4);
+        Button nextig4 =( Button)findViewById(R.id.btn_4);
         nextig4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,9 +66,9 @@ public class set extends AppCompatActivity {
         });
 
         //跳轉到用戶反饋
-        Button button5=(Button) findViewById(R.id.button5);
+        Button button5=(Button) findViewById(R.id.btn_5);
 
-        Button nextig5 =( Button)findViewById(R.id.button5);
+        Button nextig5 =( Button)findViewById(R.id.btn_5);
         nextig5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

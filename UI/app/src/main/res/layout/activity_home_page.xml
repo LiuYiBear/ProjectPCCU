@@ -8,7 +8,7 @@
     android:theme="@android:style/Theme.Translucent">
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/bt10"
         android:layout_width="95dp"
         android:layout_height="48dp"
         android:layout_marginEnd="8dp"
@@ -25,52 +25,46 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button11"
+        android:id="@+id/bt11"
         android:layout_width="88dp"
         android:layout_height="47dp"
-        android:layout_marginBottom="58dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="52dp"
         android:background="@drawable/traffic1"
-        android:textColor="#ff2222"
         android:text="行"
-        app:layout_constraintBottom_toTopOf="@+id/button13"
-        app:layout_constraintEnd_toStartOf="@+id/button12"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/button12"
-        android:layout_width="wrap_content"
-        android:layout_height="49dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
-        android:background="@drawable/yule1"
         android:textColor="#ff2222"
-        android:text="育樂"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button11"
-        app:layout_constraintTop_toBottomOf="@+id/button10" />
+        app:layout_constraintEnd_toStartOf="@+id/bt12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt10" />
 
     <Button
-        android:id="@+id/button13"
+        android:id="@+id/bt12"
+        android:layout_width="88dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="51dp"
+        android:background="@drawable/yule1"
+        android:text="育樂"
+        android:textColor="#ff2222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt11"
+        app:layout_constraintTop_toBottomOf="@+id/bt10" />
+
+    <Button
+        android:id="@+id/bt13"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:layout_marginBottom="165dp"
-        android:layout_marginEnd="148dp"
-        android:layout_marginLeft="148dp"
-        android:layout_marginRight="148dp"
-        android:layout_marginStart="148dp"
-        android:textColor="#ff2222"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/discuss1"
-        android:text="討論區"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:text="設定"
+        android:textColor="#ff2222"
+        app:layout_constraintEnd_toStartOf="@+id/bt14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt11" />
 
     <TextView
         android:id="@+id/textView"
@@ -88,4 +82,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt14"
+        android:layout_width="88dp"
+        android:layout_height="47dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/set1"
+        android:text="討論區"
+        android:textColor="#ff2222"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt13"
+        app:layout_constraintTop_toBottomOf="@+id/bt12" />
+
 </android.support.constraint.ConstraintLayout>
