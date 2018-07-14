@@ -39,10 +39,11 @@
 
         <include
             android:id="@+id/main4"
+
+
             layout="@layout/yule_all_thing"
-<<<<<<< HEAD:UI/app/src/main/res/layout/activity_yule.xml
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+
+/>
 
     </LinearLayout>
 
@@ -53,15 +54,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="0dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints">
 
-        <ScrollView
-=======
->>>>>>> 1469e91213fbbd7655c51fe63174c6d9988b781b:UI/app/src/main/res/layout/yule.xml
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
 
-            />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
