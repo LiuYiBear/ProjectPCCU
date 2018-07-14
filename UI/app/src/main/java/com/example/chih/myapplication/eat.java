@@ -7,14 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-<<<<<<< HEAD
 
-public class eat extends AppCompatActivity{
-
-
-=======
 public class eat extends AppCompatActivity {
->>>>>>> 1469e91213fbbd7655c51fe63174c6d9988b781b
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
