@@ -12,6 +12,8 @@ public class yule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.yule);
+        //Button button=(Button) findViewById(R.id.bt14);
+       // Button nextig=(Button)findViewById(R.id.bt14);
         Button backig=(Button)findViewById(R.id.bt14);
         backig.setBackgroundResource(R.drawable.yule1);//title 置換圖片功能
         backig.setOnClickListener(new View.OnClickListener(){

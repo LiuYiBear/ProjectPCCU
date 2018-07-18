@@ -13,6 +13,7 @@ public class home_page extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_page);
 
+
        /* Button button=(Button) findViewById(R.id.bt10);
 
         Button nextig =( Button)findViewById(R.id.button10);
