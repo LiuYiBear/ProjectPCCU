@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
     package="com.example.chih.myapplication">
 
     <application
@@ -17,17 +17,41 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".yule" />
-        <activity android:name=".home_page" />
-        <activity android:name=".set" />
-        <activity android:name=".traffic" />
-        <activity android:name=".eat" />
-        <activity android:name=".traffic_taxi" />
-        <activity android:name=".set_about" />
-        <activity android:name=".set_information" />
-        <activity android:name=".forum_article" />
-        <activity android:name=".talk" />
-        <activity android:name=".set_backgroundtheme"></activity>
+        <activity android:name=".yule"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".home_page">
+        </activity>
+        <activity android:name=".set"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".traffic"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".eat"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".traffic_taxi"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".set_about"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".set_information"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".forum_article"
+            android:parentActivityName=".MainActivity">
+    </activity>
+        <activity android:name=".talk"
+            android:label="talk_data"
+            android:parentActivityName=".MainActivity">
+        </activity>
+        <activity android:name=".set_backgroundtheme"
+            android:label="set_backgroundtheme"
+            android:parentActivityName=".MainActivity">
+
+        </activity>
 
     </application>
 
