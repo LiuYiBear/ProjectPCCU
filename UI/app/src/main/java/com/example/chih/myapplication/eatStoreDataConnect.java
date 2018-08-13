@@ -1,61 +1,56 @@
 package com.example.chih.myapplication;
+
 import android.os.AsyncTask;
-import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import  java.net.URL;
-import java.net.URLConnection;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.protocol.HTTP;
-import org.apache.http.util.EntityUtils;
-
-public class eatStoreDataConnect extends AppCompatActivity{
-
-    TextView displayResult;
 
 
-//    @Override
-    protected void onCreate(Bundle saveInstanceState){
 
-    }
+public class eatStoreDataConnect extends AsyncTask<URL, Void, String>{
+//讚實不需要這個class可以摻除
 
-    public static void main(String[] args){
+    @Override
+    protected String doInBackground(URL... urls) {
+        //新增
+        BufferedReader reader=null;
+        StringBuilder StringBuilder;
 
         try {
-            URL url=new URL("http://localhost/conn.php");
-            HttpURLConnection connection=(HttpURLConnection)url.openConnection();
+            HttpURLConnection connection=(HttpURLConnection)urls[0].openConnection();
             connection.setRequestMethod("GET");
             connection.setReadTimeout(1500);
             connection.connect();//連結
-
-            BufferedReader reader=new BufferedReader(new InputStreamReader(connection.getInputStream()));
-            StringBuilder stringBuilder=new StringBuilder();
-
+            reader=new BufferedReader(new InputStreamReader(connection.getInputStream()));
+            StringBuilder=new StringBuilder();
             String line=null;
             while (((line=reader.readLine())!=null)){
-                stringBuilder.append(line+"\n");
+                StringBuilder.append(line+"\n");
             }
-            String webpage=stringBuilder.toString();
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+            return StringBuilder.toString();
 
+
+        } catch (Exception e) {
+            return e.toString();
+        } finally {
+            if(reader!=null)
+                try {
+                reader.close();
+                } catch (IOException ioe){
+                return ioe.toString();
+                }
+        }
     }
 
+    @Override
+    protected void onPostExecute(String result){
+        System.out.println(result);
+    }
 }

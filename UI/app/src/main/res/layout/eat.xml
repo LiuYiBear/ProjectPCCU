@@ -5,10 +5,39 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.chih.myapplication.eat">
+
     <include
         android:id="@+id/main20"
         layout="@layout/toptitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <include
+        android:id="@+id/main20"
+        layout="@layout/eat_alltime_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <include
+        android:id="@+id/main20"
+        layout="@layout/eat_store_allview"
+        android:layout_width="match_parent"
+        android:layout_height="107dp"
+        android:layout_marginTop="108dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="235dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="224dp"
+        android:text="TextView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="91dp" />
 </android.support.constraint.ConstraintLayout>
