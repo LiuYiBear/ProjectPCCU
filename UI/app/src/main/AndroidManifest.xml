@@ -33,6 +33,11 @@
         <activity android:name=".eat"
             android:parentActivityName=".MainActivity">
         </activity>
+        <activity android:name=".eat_store_data_mylistview"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+
         <activity android:name=".traffic_taxi"
             android:parentActivityName=".MainActivity">
         </activity>
