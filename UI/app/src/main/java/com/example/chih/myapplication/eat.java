@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -78,7 +79,6 @@ public class eat extends AppCompatActivity {
                 }
                     // 將由主機取回的字串轉為JSONArray
 
-//                    TextView test1=(TextView)findViewById(R.id.textView12) ;
                     String tmp = result;//導入網頁字串放到tmp裡
                     ArrayList<HashMap<String, Object>> listItem = new ArrayList<HashMap<String, Object>>();//生成动态数组，加入数据
                     ListView list=(ListView)findViewById(R.id.list2);//绑定Layout里面的ListView
@@ -86,15 +86,13 @@ public class eat extends AppCompatActivity {
                     tmp = tmp.substring(0,tmp.length() - 2);
                     tmp=tmp+"]";
                     Log.d("TAG", tmp);
-//                    test1.setText(tmp);
                     try {
                         try {
-                            JSONArray array = new JSONArray(tmp);
-//                            HashMap<String, Object> map = new HashMap<String, Object>();
+                            final JSONArray array = new JSONArray(tmp);
                             ArrayList<HashMap<String, String>> map = new ArrayList<>();
-
+                            JSONObject jsonObject=new JSONObject();
                             for (int i = 0; i < array.length(); i++) {
-                                JSONObject jsonObject = array.getJSONObject(i);
+                                jsonObject = array.getJSONObject(i);
                                 HashMap<String,String> item = new HashMap<>();
                                 String store_id = jsonObject.getString("store_id");
                                 String store_name = jsonObject.getString("store_name");
@@ -103,18 +101,15 @@ public class eat extends AppCompatActivity {
                                 Log.d("TAG", "store_name:"+store_name+ "store_photo:" +store_photo);
 
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
+                                item.put("eatAdapterImage", "aa");//图像资源的ID//此為替代上面
                                 item.put("eatAdapterText1", store_name.toString());
                                 item.put("eatAdapterText2", store_photo.toString());
                                 item.put("eatAdapterText3", store_address.toString());
 
-                                item.put("eatAdapterImage", "aa");//图像资源的ID
-//                                map.put("eatAdapterText1", "bb");
-//                                map.put("eatAdapterText2", "cc");
-//                                map.put("eatAdapterText3", "dd");
                                 map.add(item);
 
-
                             }
+
                             SimpleAdapter listItemAdapter = new SimpleAdapter(context,map,//数据源
                                     R.layout.eat_store_allview,//ListItem的XML实现
                                     //动态数组与ImageItem对应的子项
@@ -123,6 +118,41 @@ public class eat extends AppCompatActivity {
                                     new int[] {R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
                             );
                             list.setAdapter(listItemAdapter);
+                            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                ////parent发生点击动作的AdapterView。view在AdapterView中被点击的视图(它是由adapter提供的一个视图)。position视图在adapter中的位置。id被点击元素的行id。
+                                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                    Log.d("TAG", "以點item");
+                                    Intent intent=new Intent();
+                                    intent.setClass(eat.this,eat_store_data.class);
+                                    JSONObject jsonObject=new JSONObject();
+                                    int newid=(int)id;
+                                    try {
+                                        jsonObject=array.getJSONObject(newid);
+                                        String store_name = jsonObject.getString("store_name");
+                                        String store_photo = jsonObject.getString("store_photo");
+                                        String store_address = jsonObject.getString("store_address");
+                                        String store_menu_path = jsonObject.getString("store_menu_path");
+                                        String store_photo_path = jsonObject.getString("store_photo_path");
+                                        intent.putExtra("store_name",store_name);//傳出去
+                                        intent.putExtra("store_photo",store_photo);
+                                        intent.putExtra("store_address",store_address);
+                                        intent.putExtra("store_menu_path",store_menu_path);
+                                        intent.putExtra("store_photo_path",store_photo_path);
+
+                                        Log.d("TAG", "store_name:"+store_name+"store_photo:"+store_photo+"store_address:"+store_address+"store_menu_path"+store_menu_path+"store_photo_path:"+store_photo_path);
+
+
+                                    }catch (JSONException e){
+                                        Log.d("TAG", "無法拋出問題:"+e.toString());
+                                    }
+
+
+                                    startActivity(intent);
+
+                                }
+                            });
 
 
                         } catch(JSONException e) {

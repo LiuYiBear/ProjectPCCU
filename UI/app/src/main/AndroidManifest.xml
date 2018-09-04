@@ -33,6 +33,9 @@
         <activity android:name=".eat"
             android:parentActivityName=".MainActivity">
         </activity>
+        <activity android:name=".eat_store_data"
+            android:parentActivityName=".MainActivity">
+        </activity>
         <activity android:name=".eat_store_data_mylistview"
             android:parentActivityName=".MainActivity">
         </activity>
@@ -54,6 +57,7 @@
             android:label="talk_data"
             android:parentActivityName=".MainActivity">
         </activity>
+
         <activity android:name=".set_backgroundtheme"
             android:label="set_backgroundtheme"
             android:parentActivityName=".MainActivity">

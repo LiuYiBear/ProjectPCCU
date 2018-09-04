@@ -1,0 +1,37 @@
+package com.example.chih.myapplication;
+
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.widget.TextView;
+
+public class eat_store_data extends AppCompatActivity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.eat_store_data);
+        android.support.v7.app.ActionBar actionBar = getSupportActionBar();
+
+
+
+        // 取得 Intent 附帶的資料，改成文章網址存為 url
+        Bundle args = this.getIntent().getExtras();
+        String store_name=args.getString("store_name");//前面是擷取的json內容，後面是假如沒有就取的內容，現在設為空值
+        String store_photo=args.getString("store_photo");
+        String store_address=args.getString("store_address");
+        String store_menu_path=args.getString("store_menu_path");
+        String store_photo_path=args.getString("store_photo_path");
+
+        TextView storeName=(TextView)findViewById(R.id.storeName);
+        TextView storePhone=(TextView)findViewById(R.id.storePhone);
+        TextView storeAddress=(TextView)findViewById(R.id.storeAddress);
+
+        storeName.setText(store_name);
+        storePhone.setText(store_photo);
+        storeAddress.setText(store_address);
+        Log.d("TAG", store_name+store_address+store_photo+store_photo_path);
+        // 取得XML中的TextView，設定文字為 url
+
+    }
+
+}
