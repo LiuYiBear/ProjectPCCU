@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     tools:context="com.example.chih.myapplication.set_about">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button20"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
             android:text="回到上一頁" />
@@ -25,5 +24,4 @@
             android:text="關於的內容" />
 
     </LinearLayout>
-
 </android.support.constraint.ConstraintLayout>

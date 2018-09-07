@@ -35,29 +35,34 @@
         <activity
             android:name=".eat_store_data"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".traffic_taxi"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".set_about"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".set_information"></activity>
+        <activity
+            android:name=".set_backgroundtheme"
+            android:label="set_backgroundtheme"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".set_information"
+            android:name=".set_description"
+            android:label="set_description"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".forum_article"
+            android:name=".set_usefeedback"
+            android:label="set_usefeedback"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".talk"
             android:label="talk_data"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".set_backgroundtheme"
-            android:label="set_backgroundtheme"
-            android:parentActivityName=".MainActivity" />
         <activity android:name=".registered" />
-        <activity android:name=".Login"></activity>
+        <activity android:name=".Login" />
+
     </application>
 
 </manifest>

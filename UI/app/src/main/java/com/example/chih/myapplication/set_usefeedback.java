@@ -12,9 +12,9 @@ public class set_usefeedback extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_usefeedback);
 
-        Button button1=(Button) findViewById(R.id.button);
+        Button button1=(Button) findViewById(R.id.btn_20);
 
-        Button nextig1 =( Button)findViewById(R.id.button);
+        Button nextig1 =( Button)findViewById(R.id.btn_20);
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

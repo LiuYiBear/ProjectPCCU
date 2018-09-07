@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class set_about extends AppCompatActivity  {
+public class set_about extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,5 +25,4 @@ public class set_about extends AppCompatActivity  {
             }
         });
     }
-
 }
