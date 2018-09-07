@@ -35,9 +35,7 @@
         <activity
             android:name=".eat_store_data"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".eat_store_data_mylistview"
-            android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".traffic_taxi"
             android:parentActivityName=".MainActivity" />
