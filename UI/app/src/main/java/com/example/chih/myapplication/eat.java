@@ -51,7 +51,6 @@ public class eat extends AppCompatActivity {
         Context context=this;
 //        eatStoreDataConnectDemo a=new eatStoreDataConnectDemo(context,new eatStoreDataConnectDemo().Tas){};//連結javaeatStoreDataConnect
 
-
         Log.d("TAG","onCreateaaaaaaaaaaaaaaa函式~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         //end
 
@@ -101,7 +100,7 @@ public class eat extends AppCompatActivity {
                                 Log.d("TAG", "store_name:"+store_name+ "store_photo:" +store_photo);
 
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
-                                item.put("eatAdapterImage", "aa");//图像资源的ID//此為替代上面
+                                item.put("eatAdapterImage", "ccffdd");//图像资源的ID//此為替代上面
                                 item.put("eatAdapterText1", store_name.toString());
                                 item.put("eatAdapterText2", store_photo.toString());
                                 item.put("eatAdapterText3", store_address.toString());
