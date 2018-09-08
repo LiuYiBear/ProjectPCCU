@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PCCU</string>
+    <string name="text_light">預設</string>
+    <string name="text_dark">黑色</string>
+    <string name="text_intent"></string>
+    <string name="text_intent_light"></string>
+    <string name="text_intent_drak"></string>
 </resources>
+

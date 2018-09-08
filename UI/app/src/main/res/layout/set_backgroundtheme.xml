@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="?attr/color_bg_main"
     tools:context="com.example.chih.myapplication.set_backgroundtheme">
 
     <Button
         android:id="@+id/button18"
         android:layout_width="72dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="32dp"
         android:layout_weight="1"
         android:text="Button"
         app:layout_constraintEnd_toStartOf="@+id/textView7"
@@ -23,8 +24,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
-        android:layout_marginEnd="83dp"
-        android:layout_marginStart="73dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:text="TextView"
         app:layout_constraintEnd_toStartOf="@+id/imageView2"
@@ -38,10 +39,13 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/textView7"
         android:layout_marginBottom="6dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         app:layout_constraintBottom_toTopOf="@+id/button19"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.52"
         app:srcCompat="@android:drawable/btn_star_big_on" />
 
     <LinearLayout
@@ -55,17 +59,32 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button19">
 
+        <TextView
+            android:id="@+id/tv_light"
+            style="?attr/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:padding="16dp"
+            android:text="@string/text_light" />
+
+        <TextView
+            android:id="@+id/tv_dark"
+            style="?attr/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:gravity="left"
+            android:padding="16dp"
+            android:text="@string/text_dark" />
+
         <android.support.v7.widget.RecyclerView
             android:layout_width="110dp"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent" >
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="137dp"
-            android:layout_height="match_parent" />
+        </android.support.v7.widget.RecyclerView>
 
-        <android.support.v7.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
     </LinearLayout>
 
     <Button

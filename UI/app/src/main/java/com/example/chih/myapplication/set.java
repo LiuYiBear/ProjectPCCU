@@ -65,7 +65,8 @@ public class set extends AppCompatActivity {
             }
         });
 
-        //跳轉到用戶反饋
+
+        //跳轉到app用戶反饋
         Button button5=(Button) findViewById(R.id.btn_5);
 
         Button nextig5 =( Button)findViewById(R.id.btn_5);
@@ -74,6 +75,30 @@ public class set extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent=new Intent();
                 intent.setClass(set.this,set_usefeedback.class);
+                startActivity(intent);
+            }
+        });
+        //跳轉到登入
+        Button button6=(Button) findViewById(R.id.btn_6);
+
+        Button nextig6 =( Button)findViewById(R.id.btn_6);
+        nextig6.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(set.this,set_login.class);
+                startActivity(intent);
+            }
+        });
+        //跳轉到註冊
+        Button button8=(Button) findViewById(R.id.btn_8);
+
+        Button nextig8 =( Button)findViewById(R.id.btn_8);
+        nextig8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(set.this,set_registered.class);
                 startActivity(intent);
             }
         });
