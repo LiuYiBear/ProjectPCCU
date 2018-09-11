@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.ListView;
 
 import org.apache.http.client.fluent.Content;
@@ -20,6 +21,8 @@ import java.net.URL;
 public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     private ProgressDialog loading;
     private Context context;
+    Button buttonM=(Button)findViewById(R.id.buttonM);
+
     public interface TaskListener {
         // 宣告一個接收回傳結果的程式必須實作的介面
         void onFinished(String result);
@@ -41,11 +44,15 @@ public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     @Override
     protected String doInBackground(URL... urls) {
         Log.d("TAG", "doIn函式~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        //以下開始製作POST分類按鈕功能
+
+
 
         //新增
         BufferedReader reader = null;//取得輸入類別
         StringBuilder StringBuilder;//表示可變動的字元字串
 
+        //以下是開始連結網頁並獲取網頁BODY
         try {
             HttpURLConnection connection = (HttpURLConnection) urls[0].openConnection();//創建連接類別
             connection.setRequestMethod("GET");//使用get獲取網頁

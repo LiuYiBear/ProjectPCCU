@@ -27,7 +27,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class eat extends AppCompatActivity {
+public class eat extends AppCompatActivity implements View.OnClickListener {
     TextView test1;
     JSONObject JSONObject=new JSONObject();
     Context context;
@@ -50,7 +50,6 @@ public class eat extends AppCompatActivity {
         //以下為添加data連結測試
         Context context=this;
 //        eatStoreDataConnectDemo a=new eatStoreDataConnectDemo(context,new eatStoreDataConnectDemo().Tas){};//連結javaeatStoreDataConnect
-
         Log.d("TAG","onCreateaaaaaaaaaaaaaaa函式~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         //end
 
@@ -69,6 +68,7 @@ public class eat extends AppCompatActivity {
         eat_store_data_mylistview myAsyncTask=new eat_store_data_mylistview(context, new eat_store_data_mylistview.TaskListener() {
             @Override
             public void onFinished(String result) {
+
                 try{
 //
                     if (result == null) {
@@ -97,10 +97,11 @@ public class eat extends AppCompatActivity {
                                 String store_name = jsonObject.getString("store_name");
                                 String store_photo = jsonObject.getString("store_photo");
                                 String store_address = jsonObject.getString("store_address");
+                                String store_businesshours = jsonObject.getString("store_businesshours");
                                 Log.d("TAG", "store_name:"+store_name+ "store_photo:" +store_photo);
 
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
-                                item.put("eatAdapterImage", "ccffdd");//图像资源的ID//此為替代上面
+                                item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
                                 item.put("eatAdapterText1", store_name.toString());
                                 item.put("eatAdapterText2", store_photo.toString());
                                 item.put("eatAdapterText3", store_address.toString());
@@ -108,7 +109,7 @@ public class eat extends AppCompatActivity {
                                 map.add(item);
 
                             }
-
+                            //以下為適配器導入
                             SimpleAdapter listItemAdapter = new SimpleAdapter(context,map,//数据源
                                     R.layout.eat_store_allview,//ListItem的XML实现
                                     //动态数组与ImageItem对应的子项
@@ -117,6 +118,8 @@ public class eat extends AppCompatActivity {
                                     new int[] {R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
                             );
                             list.setAdapter(listItemAdapter);
+
+                            //以下為監聽list備案下去會跳往另一個active的函式
                             list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                 @Override
                                 ////parent发生点击动作的AdapterView。view在AdapterView中被点击的视图(它是由adapter提供的一个视图)。position视图在adapter中的位置。id被点击元素的行id。
@@ -164,6 +167,37 @@ public class eat extends AppCompatActivity {
                             Log.d("TAG", e.toString());
                             Log.e("log_tag", e.toString());
                       }
+                    //以下撰寫小早餐午餐晚餐按鈕的相關處理
+                    Button buttonM=(Button)findViewById(R.id.buttonM);
+                    Button buttonD=(Button)findViewById(R.id.buttonD);
+                    Button buttonN=(Button)findViewById(R.id.buttonN);
+                    Button buttonNN=(Button)findViewById(R.id.buttonNN);
+                    buttonM.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.d("TAG", "buttonM");
+
+                        }
+                    });
+                    buttonD.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.d("TAG", "buttonD");
+                        }
+                    });
+                    buttonN.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.d("TAG", "buttonN");
+                        }
+                    });
+                    buttonNN.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Log.d("TAG", "buttonNN");
+                        }
+                    });
+//以上為button分組製作按鈕
 
                 }catch (Exception e) {
                     Log.d("TAG","連線失敗~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -178,8 +212,20 @@ public class eat extends AppCompatActivity {
             Log.d("TAG","連線url失敗~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             test1.setText(e.toString());//輸出錯誤原因
         }
-
         }
+
+
+    @Override
+    public void onClick(View v) {                                    switch (v.getId()) {
+        case R.id.buttonM:
+            Log.d("TAG", "以點buttonM");
+            break;
+
+    };
+    }
+
+
+
 }
 
 
