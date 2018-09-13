@@ -28,6 +28,7 @@ public class eat_store_data extends AppCompatActivity {
 
         // 取得 Intent 附帶的資料，改成文章網址存為 url
         Bundle args = this.getIntent().getExtras();
+        String store_id=args.getString("store_id");//前面是擷取的json內容，後面是假如沒有就取的內容，現在設為空值
         String store_name=args.getString("store_name");//前面是擷取的json內容，後面是假如沒有就取的內容，現在設為空值
         String store_photo=args.getString("store_photo");
         String store_address=args.getString("store_address");

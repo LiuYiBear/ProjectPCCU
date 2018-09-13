@@ -21,13 +21,10 @@ import java.net.URL;
 public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     private ProgressDialog loading;
     private Context context;
-    Button buttonM=(Button)findViewById(R.id.buttonM);
-
     public interface TaskListener {
         // 宣告一個接收回傳結果的程式必須實作的介面
         void onFinished(String result);
     }
-
     private TaskListener taskListener;
     // 建構元, 傳入(1)context, (2)取回資料後執行的程式
     public eat_store_data_mylistview(Context context,TaskListener taskListener){
@@ -82,7 +79,6 @@ public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     protected void onPostExecute(String result) {//做收尾的類別
         super.onPostExecute(result);
         loading.dismiss();
-
         taskListener.onFinished(result);
 
 
