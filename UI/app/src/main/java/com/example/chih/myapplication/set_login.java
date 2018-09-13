@@ -6,20 +6,21 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class set_usefeedback extends AppCompatActivity{
+public class set_login extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.set_usefeedback);
+        setContentView(R.layout.set_login);
 
-        Button button1=(Button) findViewById(R.id.btn_20);
+        Button button=(Button) findViewById(R.id.registered_btn);
 
-        Button nextig1 =( Button)findViewById(R.id.btn_20);
-        nextig1.setOnClickListener(new View.OnClickListener() {
+        Button nextig =( Button)findViewById(R.id.registered_btn);
+        nextig.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
-                intent.setClass(set_usefeedback.this,set.class);
+                intent.setClass(set_login.this,set_registered.class);
                 startActivity(intent);
             }
         });

@@ -7,22 +7,45 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class set_backgroundtheme extends AppCompatActivity {
+
+public class set_backgroundtheme extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ThemeUtil.setTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_backgroundtheme);
 
-        Button button1=(Button) findViewById(R.id.button18);
+        findViewById(R.id.tv_light).setOnClickListener(this);
+        findViewById(R.id.tv_dark).setOnClickListener(this);
 
-        Button nextig1 =( Button)findViewById(R.id.button18);
+
+        Button button1 = (Button) findViewById(R.id.button18);
+
+        Button nextig1 = (Button) findViewById(R.id.button18);
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setClass(set_backgroundtheme.this,set.class);
+                Intent intent = new Intent();
+                intent.setClass(set_backgroundtheme.this, set.class);
                 startActivity(intent);
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.tv_light:
+                PrefsUtils.write(this, Config.THEME_CONFIG, true);
+                ThemeUtil.reCreate(this);
+                break;
+            case R.id.tv_dark:
+                PrefsUtils.write(this, Config.THEME_CONFIG, false);
+                ThemeUtil.reCreate(this);
+                break;
+
+
+        }
+
     }
 }
