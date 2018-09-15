@@ -10,28 +10,28 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/buttonM"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="早餐" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/buttonD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="午餐" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/buttonN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="晚餐" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/buttonNN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
