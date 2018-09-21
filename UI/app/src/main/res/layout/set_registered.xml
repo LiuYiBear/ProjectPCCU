@@ -38,6 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="輸入姓名"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -60,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="輸入學號"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -83,6 +85,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="輸入帳號"
                 android:inputType="textPersonName" />
         </LinearLayout>
 
@@ -106,6 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
+                android:hint="輸入密碼"
                 android:inputType="textPersonName" />
         </LinearLayout>
     </LinearLayout>

@@ -14,6 +14,17 @@ public class set extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set);
 
+        ImageButton imageButton=(ImageButton)findViewById(R.id.imageButton6);
+
+        ImageButton nexting0=(ImageButton)findViewById(R.id.imageButton6);
+        nexting0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(set.this,home_page.class);
+                startActivity(intent);
+            }
+        });
         //跳轉到說明
         Button button=(Button) findViewById(R.id.btn_1);
 
@@ -103,4 +114,5 @@ public class set extends AppCompatActivity {
             }
         });
     }
-}
+ }
+
