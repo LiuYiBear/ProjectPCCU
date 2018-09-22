@@ -38,6 +38,9 @@
             android:name=".eat_store_data"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".eat_store_game"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".traffic_taxi"
             android:parentActivityName=".MainActivity" />
         <activity
