@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 // Animation : attributes
                 // https://developer.android.com/reference/android/view/animation/Animation.html
                 // 動畫執行時間
-                rotate.setDuration(3600);
+                rotate.setDuration(1000);
                 // true : 動畫執行完畢後,View對象保留在終止的位置
                 // false : 動畫執行完畢後,回復到最初狀態
                 rotate.setFillAfter(true);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onAnimationEnd(Animation animation) {
+                    public void onAnimationEnd(Animation animation) {//輪盤轉完會執行的函式
                         textView.setText(currentNumber(360 - (degree % 360)));
                     }
 

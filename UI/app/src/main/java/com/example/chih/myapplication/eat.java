@@ -47,6 +47,17 @@ public class eat extends AppCompatActivity{
             }
         });
 
+        Button game=(Button)findViewById(R.id.buttonGoGame);
+        game.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Log.d("TAG","game~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                Intent intent=new Intent();
+                intent.setClass(eat.this,eat_store_game.class);
+                startActivity(intent);
+            }
+        });
+
         //以下為添加data連結測試
         Context context=this;
 //        eatStoreDataConnectDemo a=new eatStoreDataConnectDemo(context,new eatStoreDataConnectDemo().Tas){};//連結javaeatStoreDataConnect
@@ -94,9 +105,9 @@ public class eat extends AppCompatActivity{
                                     final JSONArray array = new JSONArray(tmp);
                                     ArrayList<HashMap<String, String>> map = new ArrayList<>();
                                     JSONObject jsonObject=new JSONObject();
-                                    for (int i = 0; i < array.length(); i++) {
+                                    for (int i = 0; i < array.length(); i++) {//早餐5點到11點
                                         jsonObject = array.getJSONObject(i);
-                                        if (Integer.valueOf(jsonObject.getString("store_businesshours"))>=05000000&&Integer.valueOf(jsonObject.getString("store_businesshours"))<=11000000){
+                                        if ((jsonObject.getInt("storeStarOpen")<=1030&&jsonObject.getInt("endOpen")>=530)||Integer.valueOf(jsonObject.getString("store_businesshours"))==24002400){
                                             HashMap<String,String> item = new HashMap<>();
                                             String store_id = jsonObject.getString("store_id");
                                             String store_name = jsonObject.getString("store_name");
@@ -210,15 +221,14 @@ public class eat extends AppCompatActivity{
                             tmp = tmp.substring(tmp.indexOf("["), tmp.lastIndexOf("]") + 1);//做字串內容擷取
                             tmp = tmp.substring(0,tmp.length() - 2);
                             tmp=tmp+"]";
-                            Log.d("TAG", tmp);
                             try {
                                 try {
                                     final JSONArray array = new JSONArray(tmp);
                                     ArrayList<HashMap<String, String>> map = new ArrayList<>();
                                     JSONObject jsonObject=new JSONObject();
-                                    for (int i = 0; i < array.length(); i++) {
+                                    for (int i = 0; i < array.length(); i++) {//午餐11點到下午2點
                                         jsonObject = array.getJSONObject(i);
-                                        if (Integer.valueOf(jsonObject.getString("store_businesshours"))>=11000000&&Integer.valueOf(jsonObject.getString("store_businesshours"))<=14000000){
+                                        if ((jsonObject.getInt("storeStarOpen")<=1400&&jsonObject.getInt("endOpen")>=1100)||Integer.valueOf(jsonObject.getString("store_businesshours"))==24002400){
                                             HashMap<String,String> item = new HashMap<>();
                                             String store_id = jsonObject.getString("store_id");
                                             String store_name = jsonObject.getString("store_name");
@@ -343,9 +353,9 @@ public class eat extends AppCompatActivity{
                                     final JSONArray array = new JSONArray(tmp);
                                     ArrayList<HashMap<String, String>> map = new ArrayList<>();
                                     JSONObject jsonObject=new JSONObject();
-                                    for (int i = 0; i < array.length(); i++) {
+                                    for (int i = 0; i < array.length(); i++) {//晚餐下午5點到晚上9點
                                         jsonObject = array.getJSONObject(i);
-                                        if (Integer.valueOf(jsonObject.getString("store_businesshours"))>=17000000&&Integer.valueOf(jsonObject.getString("store_businesshours"))<=21000000){
+                                        if ((jsonObject.getInt("storeStarOpen")<=2100&&jsonObject.getInt("endOpen")>=1730)||Integer.valueOf(jsonObject.getString("store_businesshours"))==24002400){
                                             HashMap<String,String> item = new HashMap<>();
                                             String store_id = jsonObject.getString("store_id");
                                             String store_name = jsonObject.getString("store_name");

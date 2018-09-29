@@ -38,7 +38,7 @@
             android:text="宵夜" />
 
         <Button
-            android:id="@+id/button5"
+            android:id="@+id/buttonGoGame"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
