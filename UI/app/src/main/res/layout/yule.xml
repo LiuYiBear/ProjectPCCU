@@ -39,8 +39,6 @@
 
         <include
             android:id="@+id/main4"
-
-
             layout="@layout/yule_all_thing"
 
 />
