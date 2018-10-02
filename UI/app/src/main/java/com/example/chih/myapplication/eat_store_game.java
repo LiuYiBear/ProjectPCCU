@@ -1,27 +1,38 @@
 package com.example.chih.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.DecelerateInterpolator;
 import android.view.animation.RotateAnimation;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.net.URL;
+import java.sql.Struct;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Random;
 
 public class eat_store_game extends AppCompatActivity {
-
-
-
-
-
     Button button;
     TextView textView;
     ImageView iv_wheel;
+    Context context;
 
     Random r;
 
@@ -32,6 +43,7 @@ public class eat_store_game extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eat_store_game);
 
@@ -210,5 +222,95 @@ public class eat_store_game extends AppCompatActivity {
         }
 
         return text;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        context =this;
+        final Button buttonStoreChose=(Button)findViewById(R.id.storeSelect);
+        buttonStoreChose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ListView listGameStore=(ListView)findViewById(R.id.listGameStore);
+
+                listGameStore.setVisibility(View.VISIBLE);
+
+
+                eat_store_data_mylistview myAsyncTask=new eat_store_data_mylistview(context, new eat_store_data_mylistview.TaskListener() {
+                    @Override
+                    public void onFinished(String result) {
+                        try{
+                            if (result == null) {
+                                Toast.makeText(context, "無資料!", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                            // 將由主機取回的字串轉為JSONArray
+                            String tmp = result;//導入網頁字串放到tmp裡
+                            ListView listAll=(ListView)findViewById(R.id.listGameStore);//绑定Layout里面的ListView
+                            tmp = tmp.substring(tmp.indexOf("["), tmp.lastIndexOf("]") + 1);//做字串內容擷取
+                            tmp = tmp.substring(0,tmp.length() - 2);
+                            tmp=tmp+"]";
+                            Log.d("TAG", tmp);
+                            try {
+                                try {
+                                    final JSONArray array = new JSONArray(tmp);
+                                    ArrayList<HashMap<String, String>> map = new ArrayList<>();
+                                    JSONObject jsonObject=new JSONObject();
+                                    for (int i = 0; i < array.length(); i++) {
+                                        jsonObject = array.getJSONObject(i);
+                                        HashMap<String,String> item = new HashMap<>();
+                                        String store_name = jsonObject.getString("store_name");
+                                        item.put("eatAdapterText1", store_name.toString());
+                                        map.add(item);
+                                    }
+                                    //以下為適配器導入
+                                    SimpleAdapter listItemAdapter = new SimpleAdapter(context,map,//数据源
+                                            R.layout.eat_store_game_data_select,//ListItem的XML实现
+                                            //动态数组与ImageItem对应的子项
+                                            new String[] {"eatAdapterText1"},
+                                            //ImageItem的XML文件里面的一个ImageView,3个TextView ID
+                                            new int[] {R.id.textView9}
+                                    );
+                                    listAll.setAdapter(listItemAdapter);
+                                    listAll.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
+                                    //以下為監聽list備案下去會跳往另一個active的函式
+                                    listAll.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                        @Override
+                                        ////parent发生点击动作的AdapterView。view在AdapterView中被点击的视图(它是由adapter提供的一个视图)。position视图在adapter中的位置。id被点击元素的行id。
+                                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                                            AbsListView list = (AbsListView)parent;
+                                            int idx = list.getCheckedItemPosition();
+                                            Struct checked = (Struct)parent.getAdapter().getItem(idx);
+                                        }
+                                    });
+                                } catch(JSONException e) {
+                                    Log.d("TAG", "json導入超級大失敗"+e.toString());
+                                }
+                                Log.d("TAG", "成功導入");
+                                //生成适配器的Item和动态数组对应的元素
+
+                            } catch (Exception e) {
+                                Log.d("TAG", e.toString());
+                                Log.e("log_tag", e.toString());
+                            }
+                        }catch (Exception e) {
+                            Log.d("TAG","連線失敗~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                            Toast.makeText(context, "連線失敗!", Toast.LENGTH_SHORT).show();
+                        }
+                    }});
+                try {
+                    URL url=new URL("http://192.168.0.101/conn.php");//建立網址
+                    myAsyncTask.execute(url);//輸入網址到類別裡
+                }
+                catch (Exception e){
+                    Log.d("TAG","連線url失敗~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+                }
+
+            }
+        });
+
+
     }
 }
