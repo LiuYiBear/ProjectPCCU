@@ -9,7 +9,7 @@
         <item name="color_bg_main">#feffb6</item>
         <item name="text_style">@style/Text_light_style</item>
         <item name="second_text_style">@style/second_text_style_light</item>
-        <item name="android:colorBackground">@color/background_material_light</item>
+
     </style>
 
 
