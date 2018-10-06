@@ -17,7 +17,7 @@
             android:id="@+id/button"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            android:text="回到上一頁" />
+            android:text="回到首頁" />
 
         <EditText
             android:id="@+id/editText"
