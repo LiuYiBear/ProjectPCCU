@@ -46,11 +46,8 @@ public class eat_store_game extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eat_store_game);
-
-
 
         Button backig=(Button)findViewById(R.id.back);
         backig.setOnClickListener(new View.OnClickListener(){
