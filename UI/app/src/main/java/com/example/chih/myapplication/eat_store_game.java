@@ -12,7 +12,10 @@ import android.view.animation.RotateAnimation;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.CheckedTextView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
@@ -46,6 +49,8 @@ public class eat_store_game extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eat_store_game);
+
+
 
         Button backig=(Button)findViewById(R.id.back);
         backig.setOnClickListener(new View.OnClickListener(){
@@ -229,13 +234,23 @@ public class eat_store_game extends AppCompatActivity {
         super.onResume();
         context =this;
         final Button buttonStoreChose=(Button)findViewById(R.id.storeSelect);
+        Button GameStoreAdd=(Button)findViewById(R.id.GameStoreAdd);
+        GameStoreAdd.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                ListView listGameStore=(ListView)findViewById(R.id.listGameStore);
+                listGameStore.setVisibility(View.INVISIBLE);
+                Button GameStoreAdd=(Button)findViewById(R.id.GameStoreAdd);
+                GameStoreAdd.setVisibility(View.INVISIBLE);
+            }
+        });
         buttonStoreChose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ListView listGameStore=(ListView)findViewById(R.id.listGameStore);
-
                 listGameStore.setVisibility(View.VISIBLE);
-
+                Button GameStoreAdd=(Button)findViewById(R.id.GameStoreAdd);
+                GameStoreAdd.setVisibility(View.VISIBLE);
 
                 eat_store_data_mylistview myAsyncTask=new eat_store_data_mylistview(context, new eat_store_data_mylistview.TaskListener() {
                     @Override
@@ -247,7 +262,7 @@ public class eat_store_game extends AppCompatActivity {
                             }
                             // 將由主機取回的字串轉為JSONArray
                             String tmp = result;//導入網頁字串放到tmp裡
-                            ListView listAll=(ListView)findViewById(R.id.listGameStore);//绑定Layout里面的ListView
+                            final ListView listAll=(ListView)findViewById(R.id.listGameStore);//绑定Layout里面的ListView
                             tmp = tmp.substring(tmp.indexOf("["), tmp.lastIndexOf("]") + 1);//做字串內容擷取
                             tmp = tmp.substring(0,tmp.length() - 2);
                             tmp=tmp+"]";
@@ -255,7 +270,7 @@ public class eat_store_game extends AppCompatActivity {
                             try {
                                 try {
                                     final JSONArray array = new JSONArray(tmp);
-                                    ArrayList<HashMap<String, String>> map = new ArrayList<>();
+                                    final ArrayList<HashMap<String, String>> map = new ArrayList<>();
                                     JSONObject jsonObject=new JSONObject();
                                     for (int i = 0; i < array.length(); i++) {
                                         jsonObject = array.getJSONObject(i);
@@ -270,7 +285,7 @@ public class eat_store_game extends AppCompatActivity {
                                             //动态数组与ImageItem对应的子项
                                             new String[] {"eatAdapterText1"},
                                             //ImageItem的XML文件里面的一个ImageView,3个TextView ID
-                                            new int[] {R.id.textView9}
+                                            new int[] {R.id.checkBox}
                                     );
                                     listAll.setAdapter(listItemAdapter);
                                     listAll.setChoiceMode(AbsListView.CHOICE_MODE_MULTIPLE);
@@ -278,12 +293,15 @@ public class eat_store_game extends AppCompatActivity {
                                     listAll.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                                         @Override
                                         ////parent发生点击动作的AdapterView。view在AdapterView中被点击的视图(它是由adapter提供的一个视图)。position视图在adapter中的位置。id被点击元素的行id。
-                                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                                        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {//parent是识别是哪个listview，view是当前listview的item的view的布局，就是可以用这个view，获取里面的控件的id后操作控件，position是当前item在listview中适配器里的位置，id是当前item在listview里的第几行的位置
+                                            Log.d("TAG","position:"+position+"id:"+id);
+                                            HashMap<String, String> item = map.get(position);
+                                            String name = (String) item.get("eatAdapterText1");
+                                            Log.d("TAH", "CLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICKCLICK: ");
 
-                                            AbsListView list = (AbsListView)parent;
-                                            int idx = list.getCheckedItemPosition();
-                                            Struct checked = (Struct)parent.getAdapter().getItem(idx);
                                         }
+
+
                                     });
                                 } catch(JSONException e) {
                                     Log.d("TAG", "json導入超級大失敗"+e.toString());

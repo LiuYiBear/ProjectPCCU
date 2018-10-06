@@ -73,4 +73,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/linearLayout8" />
 
+    <Button
+
+        android:id="@+id/GameStoreAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="360dp"
+        android:layout_weight="1"
+        android:text="加入"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/listGameStore"
+        app:layout_constraintTop_toTopOf="@+id/listGameStore" />
+
 </android.support.constraint.ConstraintLayout>
