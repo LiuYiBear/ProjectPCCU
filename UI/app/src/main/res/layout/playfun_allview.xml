@@ -6,7 +6,7 @@
 
 
     <EditText
-        android:id="@+id/editText10"
+        android:id="@+id/playfuneditText"
         android:layout_width="61dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -20,7 +20,7 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:id="@+id/eatAdapterImage"
+            android:id="@+id/playfunAdapterImage"
             android:layout_width="161dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -33,23 +33,30 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/eatAdapterText1"
+                android:id="@+id/playfunAdapterText1"
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/eatAdapterText2"
+                android:id="@+id/playfunAdapterText2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/eatAdapterText3"
+                android:id="@+id/playfunAdapterText3"
                 android:layout_width="match_parent"
                 android:layout_height="43dp"
                 android:text="TextView" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="163dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="前往" />
 
     </LinearLayout>
 

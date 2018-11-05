@@ -35,6 +35,9 @@
             android:name=".traffic"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".traffic_allbus"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".eat"
             android:parentActivityName=".MainActivity" />
         <activity
@@ -42,7 +45,10 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".eat_store_game"
-            android:parentActivityName=".MainActivity" />-->
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".playfun"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".traffic_taxi"
             android:parentActivityName=".MainActivity" />
