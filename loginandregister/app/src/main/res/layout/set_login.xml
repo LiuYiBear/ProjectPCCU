@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="80dp"
+    android:background="?attr/color_bg_main"
+    tools:context="com.example.user.myapplication.set_login">
+    <ImageView
+        android:id="@+id/logo"
+        android:src="@drawable/logo2"
+        android:layout_marginBottom="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutemail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo">
+        <EditText
+            android:id="@+id/email"
+            android:hint="帳號"
+            android:textColorHint="#000000"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/colortext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/layoutpassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutemail"
+        app:passwordToggleEnabled="true">
+        <EditText
+            android:id="@+id/password"
+            android:hint="密碼"
+            android:textColorHint="#000000"
+            android:inputType="textPassword"
+            android:textColor="@color/colortext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.design.widget.TextInputLayout>
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_below="@+id/layoutpassword"
+        android:layout_marginTop="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_below="@+id/layoutpassword"
+        android:layout_marginTop="30dp"
+        style="?attr/second_button_style"
+        android:text="登入"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/link_regist"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="註冊"
+        style="?attr/second_button_style"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
