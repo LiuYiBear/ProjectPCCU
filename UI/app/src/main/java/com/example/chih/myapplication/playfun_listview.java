@@ -1,16 +1,9 @@
 package com.example.chih.myapplication;
 
-import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
-import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
-import android.widget.ListView;
-
-import org.apache.http.client.fluent.Content;
-import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,7 +11,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
+public class playfun_listview  extends AsyncTask<URL, Void, String> {
     private ProgressDialog loading;
     private Context context;
     public interface TaskListener {
@@ -27,7 +20,7 @@ public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     }
     private TaskListener taskListener;
     // 建構元, 傳入(1)context, (2)取回資料後執行的程式
-    public eat_store_data_mylistview(Context context,TaskListener taskListener){
+    public playfun_listview(Context context,TaskListener taskListener){
         this.context=context;
         this.taskListener = taskListener;
     }
@@ -42,7 +35,6 @@ public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     protected String doInBackground(URL... urls) {
         Log.d("TAG", "doIn函式~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         //以下開始製作POST分類按鈕功能
-
         //新增
         BufferedReader reader = null;//取得輸入類別
         StringBuilder StringBuilder;//表示可變動的字元字串

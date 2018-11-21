@@ -30,7 +30,7 @@ public class eat_store_data extends AppCompatActivity {
         Bundle args = this.getIntent().getExtras();
         String store_id=args.getString("store_id");//前面是擷取的json內容，後面是假如沒有就取的內容，現在設為空值
         String store_name=args.getString("store_name");//前面是擷取的json內容，後面是假如沒有就取的內容，現在設為空值
-        String store_photo=args.getString("store_photo");
+        String store_phone=args.getString("store_phone");
         String store_address=args.getString("store_address");
         String store_menu_path=args.getString("store_menu_path");
         String store_photo_path=args.getString("store_photo_path");
@@ -40,9 +40,9 @@ public class eat_store_data extends AppCompatActivity {
         TextView storeAddress=(TextView)findViewById(R.id.storeAddress);
 
         storeName.setText(store_name);
-        storePhone.setText(store_photo);
+        storePhone.setText(store_phone);
         storeAddress.setText(store_address);
-        Log.d("TAG", store_name+store_address+store_photo+store_photo_path);
+        Log.d("TAG", store_name+store_address+store_phone+store_photo_path);
         // 取得XML中的TextView，設定文字為 url
 
     }

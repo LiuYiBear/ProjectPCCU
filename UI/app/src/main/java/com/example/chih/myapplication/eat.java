@@ -58,12 +58,6 @@ public class eat extends AppCompatActivity{
             }
         });
 
-        //以下為添加data連結測試
-        Context context=this;
-//        eatStoreDataConnectDemo a=new eatStoreDataConnectDemo(context,new eatStoreDataConnectDemo().Tas){};//連結javaeatStoreDataConnect
-        Log.d("TAG","onCreateaaaaaaaaaaaaaaa函式~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        //end
-
     }
     // 首次載入App時會執行onResume(), 下次Activity由背景回到前景時也會執行onResume()
     @Override
@@ -111,16 +105,16 @@ public class eat extends AppCompatActivity{
                                             HashMap<String,String> item = new HashMap<>();
                                             String store_id = jsonObject.getString("store_id");
                                             String store_name = jsonObject.getString("store_name");
-                                            String store_photo = jsonObject.getString("store_photo");
+                                            String store_phone = jsonObject.getString("store_phone");
                                             String store_address = jsonObject.getString("store_address");
                                             String store_businesshours = jsonObject.getString("store_businesshours");
-                                            Log.d("TAG", "store_name:"+store_name+ "store_photo:" +store_photo);
+                                            Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
                                             item.put("editText10", store_id.toString());
                                             item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
-                                            item.put("eatAdapterText1", store_name.toString());
-                                            item.put("eatAdapterText2", store_photo.toString());
-                                            item.put("eatAdapterText3", store_address.toString());
+                                            item.put("eatAdapterText1", store_name);
+                                            item.put("eatAdapterText2", store_phone);
+                                            item.put("eatAdapterText3", store_address);
                                             map.add(item);
                                         }
 //                                        editText10
@@ -155,18 +149,18 @@ public class eat extends AppCompatActivity{
                                                 }
                                                 String store_id = jsonObject.getString("store_id");
                                                 String store_name = jsonObject.getString("store_name");
-                                                String store_photo = jsonObject.getString("store_photo");
+                                                String store_phone = jsonObject.getString("store_phone");
                                                 String store_address = jsonObject.getString("store_address");
                                                 String store_menu_path = jsonObject.getString("store_menu_path");
                                                 String store_photo_path = jsonObject.getString("store_photo_path");
 
                                                 intent.putExtra("store_id",store_id);//傳出去
                                                 intent.putExtra("store_name",store_name);
-                                                intent.putExtra("store_photo",store_photo);
+                                                intent.putExtra("store_phone",store_phone);
                                                 intent.putExtra("store_address",store_address);
                                                 intent.putExtra("store_menu_path",store_menu_path);
                                                 intent.putExtra("store_photo_path",store_photo_path);
-                                                Log.d("TAG", "store_name:"+store_name+"store_photo:"+store_photo+"store_address:"+store_address+"store_menu_path"+store_menu_path+"store_photo_path:"+store_photo_path);
+                                                Log.d("TAG", "store_name:"+store_name+"store_phone:"+store_phone+"store_address:"+store_address+"store_menu_path"+store_menu_path+"store_photo_path:"+store_photo_path);
                                             }catch (JSONException e){
                                                 Log.d("TAG", "無法拋出問題:"+e.toString());
                                             }
@@ -232,16 +226,16 @@ public class eat extends AppCompatActivity{
                                             HashMap<String,String> item = new HashMap<>();
                                             String store_id = jsonObject.getString("store_id");
                                             String store_name = jsonObject.getString("store_name");
-                                            String store_photo = jsonObject.getString("store_photo");
+                                            String store_phone = jsonObject.getString("store_phone");
                                             String store_address = jsonObject.getString("store_address");
                                             String store_businesshours = jsonObject.getString("store_businesshours");
-                                            Log.d("TAG", "store_name:"+store_name+ "store_photo:" +store_photo);
+                                            Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
                                             item.put("editText10", store_id.toString());
                                             item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
-                                            item.put("eatAdapterText1", store_name.toString());
-                                            item.put("eatAdapterText2", store_photo.toString());
-                                            item.put("eatAdapterText3", store_address.toString());
+                                            item.put("eatAdapterText1", store_name);
+                                            item.put("eatAdapterText2", store_phone);
+                                            item.put("eatAdapterText3", store_address);
                                             map.add(item);
                                         }
 
@@ -277,14 +271,14 @@ public class eat extends AppCompatActivity{
                                                 }
                                                 String store_id = jsonObject.getString("store_id");
                                                 String store_name = jsonObject.getString("store_name");
-                                                String store_photo = jsonObject.getString("store_photo");
+                                                String store_phone = jsonObject.getString("store_phone");
                                                 String store_address = jsonObject.getString("store_address");
                                                 String store_menu_path = jsonObject.getString("store_menu_path");
                                                 String store_photo_path = jsonObject.getString("store_photo_path");
 
                                                 intent.putExtra("store_id",store_id);//傳出去
                                                 intent.putExtra("store_name",store_name);//傳出去
-                                                intent.putExtra("store_photo",store_photo);
+                                                intent.putExtra("store_phone",store_phone);
                                                 intent.putExtra("store_address",store_address);
                                                 intent.putExtra("store_menu_path",store_menu_path);
                                                 intent.putExtra("store_photo_path",store_photo_path);
@@ -359,16 +353,16 @@ public class eat extends AppCompatActivity{
                                             HashMap<String,String> item = new HashMap<>();
                                             String store_id = jsonObject.getString("store_id");
                                             String store_name = jsonObject.getString("store_name");
-                                            String store_photo = jsonObject.getString("store_photo");
+                                            String store_phone = jsonObject.getString("store_phone");
                                             String store_address = jsonObject.getString("store_address");
                                             String store_businesshours = jsonObject.getString("store_businesshours");
-                                            Log.d("TAG", "store_name:"+store_name+ "store_photo:" +store_photo);
+                                            Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
-                                            item.put("editText10", store_id.toString());
+                                            item.put("editText10", store_id);
                                             item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
-                                            item.put("eatAdapterText1", store_name.toString());
-                                            item.put("eatAdapterText2", store_photo.toString());
-                                            item.put("eatAdapterText3", store_address.toString());
+                                            item.put("eatAdapterText1", store_name);
+                                            item.put("eatAdapterText2", store_phone);
+                                            item.put("eatAdapterText3", store_address);
                                             map.add(item);
                                         }
 
@@ -404,19 +398,19 @@ public class eat extends AppCompatActivity{
                                                 }
                                                 String store_id = jsonObject.getString("store_id");
                                                 String store_name = jsonObject.getString("store_name");
-                                                String store_photo = jsonObject.getString("store_photo");
+                                                String store_phone = jsonObject.getString("store_phone");
                                                 String store_address = jsonObject.getString("store_address");
                                                 String store_menu_path = jsonObject.getString("store_menu_path");
                                                 String store_photo_path = jsonObject.getString("store_photo_path");
 
                                                 intent.putExtra("store_id",store_id);//傳出去
                                                 intent.putExtra("store_name",store_name);//傳出去
-                                                intent.putExtra("store_photo",store_photo);
+                                                intent.putExtra("store_phone",store_phone);
                                                 intent.putExtra("store_address",store_address);
                                                 intent.putExtra("store_menu_path",store_menu_path);
                                                 intent.putExtra("store_photo_path",store_photo_path);
 
-                                                Log.d("TAG", "store_name:"+store_name+"store_photo:"+store_photo+"store_address:"+store_address+"store_menu_path"+store_menu_path+"store_photo_path:"+store_photo_path);
+                                                Log.d("TAG", "store_name:"+store_name+"store_phone:"+store_phone+"store_address:"+store_address+"store_menu_path"+store_menu_path+"store_photo_path:"+store_photo_path);
 
 
                                             }catch (JSONException e){
@@ -455,7 +449,7 @@ public class eat extends AppCompatActivity{
                 }
             }
         });
-        //以下為午餐試驗
+
         eat_store_data_mylistview myAsyncTask=new eat_store_data_mylistview(context, new eat_store_data_mylistview.TaskListener() {
             @Override
             public void onFinished(String result) {
@@ -485,15 +479,15 @@ public class eat extends AppCompatActivity{
                                 HashMap<String,String> item = new HashMap<>();
                                 String store_id = jsonObject.getString("store_id");
                                 String store_name = jsonObject.getString("store_name");
-                                String store_photo = jsonObject.getString("store_photo");
+                                String store_phone = jsonObject.getString("store_phone");
                                 String store_address = jsonObject.getString("store_address");
                                 String store_businesshours = jsonObject.getString("store_businesshours");
-                                Log.d("TAG", "store_name:"+store_name+ "store_photo:" +store_photo);
+                                Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
                                 item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
-                                item.put("eatAdapterText1", store_name.toString());
-                                item.put("eatAdapterText2", store_photo.toString());
-                                item.put("eatAdapterText3", store_address.toString());
+                                item.put("eatAdapterText1", store_name);
+                                item.put("eatAdapterText2", store_phone);
+                                item.put("eatAdapterText3", store_address);
                                 map.add(item);
                             }
                             //以下為適配器導入
@@ -520,17 +514,17 @@ public class eat extends AppCompatActivity{
                                     try {
                                         jsonObject=array.getJSONObject(newid);
                                         String store_name = jsonObject.getString("store_name");
-                                        String store_photo = jsonObject.getString("store_photo");
+                                        String store_phone = jsonObject.getString("store_phone");
                                         String store_address = jsonObject.getString("store_address");
                                         String store_menu_path = jsonObject.getString("store_menu_path");
                                         String store_photo_path = jsonObject.getString("store_photo_path");
                                         intent.putExtra("store_name",store_name);//傳出去
-                                        intent.putExtra("store_photo",store_photo);
+                                        intent.putExtra("store_phone",store_phone);
                                         intent.putExtra("store_address",store_address);
                                         intent.putExtra("store_menu_path",store_menu_path);
                                         intent.putExtra("store_photo_path",store_photo_path);
 
-                                        Log.d("TAG", "store_name:"+store_name+"store_photo:"+store_photo+"store_address:"+store_address+"store_menu_path"+store_menu_path+"store_photo_path:"+store_photo_path);
+                                        Log.d("TAG", "store_name:"+store_name+"store_phone:"+store_phone+"store_address:"+store_address+"store_menu_path"+store_menu_path+"store_photo_path:"+store_photo_path);
 
 
                                     }catch (JSONException e){

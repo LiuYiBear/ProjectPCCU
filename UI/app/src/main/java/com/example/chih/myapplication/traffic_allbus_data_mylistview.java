@@ -18,7 +18,7 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
+public class traffic_allbus_data_mylistview extends AsyncTask<URL, Void, String>{
     private ProgressDialog loading;
     private Context context;
     public interface TaskListener {
@@ -27,7 +27,7 @@ public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     }
     private TaskListener taskListener;
     // 建構元, 傳入(1)context, (2)取回資料後執行的程式
-    public eat_store_data_mylistview(Context context,TaskListener taskListener){
+    public traffic_allbus_data_mylistview(Context context,TaskListener taskListener){
         this.context=context;
         this.taskListener = taskListener;
     }
@@ -90,4 +90,5 @@ public class eat_store_data_mylistview extends AsyncTask<URL, Void, String> {
     protected void onCancelled() {
         super.onCancelled();
     }
+
 }

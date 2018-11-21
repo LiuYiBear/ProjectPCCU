@@ -28,14 +28,22 @@ public class traffic extends AppCompatActivity {
 
 
 
-        Button button1=(Button) findViewById(R.id.btn17);
-
-        Button nextig1 =( Button)findViewById(R.id.btn17);
+        Button nextig1 =( Button)findViewById(R.id.gotaxi);
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
                 intent.setClass(traffic.this,traffic_taxi.class);
+                startActivity(intent);
+            }
+        });
+
+        Button gobus =( Button)findViewById(R.id.gobus);
+        gobus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(traffic.this,traffic_allbus.class);
                 startActivity(intent);
             }
         });
