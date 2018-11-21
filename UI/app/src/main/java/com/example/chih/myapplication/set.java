@@ -11,6 +11,7 @@ public class set extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ThemeUtil.setTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set);
 
@@ -21,7 +22,7 @@ public class set extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
-                intent.setClass(set.this,home_page.class);
+                intent.setClass(set.this,MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -77,18 +78,7 @@ public class set extends AppCompatActivity {
         });
 
 
-        //跳轉到app用戶反饋
-        Button button5=(Button) findViewById(R.id.btn_5);
 
-        Button nextig5 =( Button)findViewById(R.id.btn_5);
-        nextig5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent();
-                intent.setClass(set.this,set_usefeedback.class);
-                startActivity(intent);
-            }
-        });
         //跳轉到登入
         Button button6=(Button) findViewById(R.id.btn_6);
 
@@ -101,18 +91,42 @@ public class set extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        //跳轉到註冊
-        Button button8=(Button) findViewById(R.id.btn_8);
+       /*  //跳轉到註冊
+       Button button8=(Button) findViewById(R.id.btn_8);
 
         Button nextig8 =( Button)findViewById(R.id.btn_8);
         nextig8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
-                intent.setClass(set.this,set_registered.class);
+                intent.setClass(set.this,RegisterActivity.class);
                 startActivity(intent);
             }
-        });
-    }
- }
+        });*/
+       /*  註冊xml  button
+        <Button
+            android:id="@+id/btn_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="註冊" />
+            // 登出的xml  button
+              <Button
+            android:id="@+id/btn_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="登出" />
+            */
+        //跳轉到app用戶反饋
+        /*Button button5=(Button) findViewById(R.id.btn_5);
 
+        Button nextig5 =( Button)findViewById(R.id.btn_5);
+        nextig5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent();
+                intent.setClass(set.this,set_usefeedback.class);
+                startActivity(intent);
+            }
+        });*/
+    }
+}

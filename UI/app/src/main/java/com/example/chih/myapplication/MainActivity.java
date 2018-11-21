@@ -81,15 +81,7 @@ public class MainActivity extends AppCompatActivity  {
 
 
 
-            Button nextig5 =( Button)findViewById(R.id.bt14);
-            nextig5.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent=new Intent();
-                    intent.setClass(MainActivity.this,talk.class);
-                    startActivity(intent);
-                }
-            });
+
 }
 
    /* public void onClick(View v) {

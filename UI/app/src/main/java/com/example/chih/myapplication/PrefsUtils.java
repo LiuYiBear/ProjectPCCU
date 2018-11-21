@@ -3,20 +3,13 @@ package com.example.chih.myapplication;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.Editor;
 import android.preference.PreferenceManager;
-
-/**
- * Created by user on 2018/9/8.
- */
 
 public class PrefsUtils {
     public PrefsUtils() {
     }
 
     /**
-     * 写入配置文件
-     *
      * @param context
      * @param key
      * @param value
@@ -26,7 +19,7 @@ public class PrefsUtils {
             return false;
         }
         SharedPreferences spf = PreferenceManager.getDefaultSharedPreferences(context);
-        Editor edit = spf.edit();
+        SharedPreferences.Editor edit = spf.edit();
         edit.putString(key, value);
         return edit.commit();
     }
@@ -36,7 +29,7 @@ public class PrefsUtils {
             return false;
         }
         SharedPreferences spf = PreferenceManager.getDefaultSharedPreferences(context);
-        Editor edit = spf.edit();
+        SharedPreferences.Editor edit = spf.edit();
         edit.putBoolean(key, value);
         return edit.commit();
     }
@@ -46,7 +39,7 @@ public class PrefsUtils {
             return false;
         }
         SharedPreferences spf = PreferenceManager.getDefaultSharedPreferences(context);
-        Editor edit = spf.edit();
+        SharedPreferences.Editor edit = spf.edit();
         edit.putFloat(key, value);
         return edit.commit();
     }
@@ -56,7 +49,7 @@ public class PrefsUtils {
             return false;
         }
         SharedPreferences spf = PreferenceManager.getDefaultSharedPreferences(context);
-        Editor edit = spf.edit();
+        SharedPreferences.Editor edit = spf.edit();
         edit.putInt(key, value);
         return edit.commit();
     }
@@ -66,17 +59,15 @@ public class PrefsUtils {
             return false;
         }
         SharedPreferences spf = PreferenceManager.getDefaultSharedPreferences(context);
-        Editor edit = spf.edit();
+        SharedPreferences.Editor edit = spf.edit();
         edit.putLong(key, value);
         return edit.commit();
     }
 
     /**
-     * 读取配置文件
-     *
      * @param context
      * @param key
-     * @param defaultValue 读取失败后返回的值
+     * @param defaultValue 讀取讀取失敗後返回的值
      * @return value
      */
     public static String read(Context context, String key, String defaultValue) {
