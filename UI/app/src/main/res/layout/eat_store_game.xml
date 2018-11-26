@@ -17,7 +17,7 @@
             android:id="@+id/main4"
             layout="@layout/toptitle_back"
             android:layout_width="match_parent"
-            android:layout_height="57dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1" />
 
         <ImageView

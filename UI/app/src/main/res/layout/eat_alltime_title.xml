@@ -12,36 +12,36 @@
         <Button
             android:id="@+id/buttonM"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_weight="1"
-            android:text="早餐" />
+            android:background="@drawable/breakfastbutton" />
 
         <Button
             android:id="@+id/buttonD"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_weight="1"
-            android:text="午餐" />
+            android:background="@drawable/dinnerbutton" />
 
         <Button
             android:id="@+id/buttonN"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_weight="1"
-            android:text="晚餐" />
+            android:background="@drawable/nightbutton" />
 
         <Button
             android:id="@+id/buttonNN"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_weight="1"
-            android:text="宵夜" />
+            android:background="@drawable/upnightbutton" />
 
         <Button
             android:id="@+id/buttonGoGame"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="46dp"
             android:layout_weight="1"
-            android:text="輪盤" />
+            android:background="@drawable/playbutton" />
     </LinearLayout>
 </LinearLayout>

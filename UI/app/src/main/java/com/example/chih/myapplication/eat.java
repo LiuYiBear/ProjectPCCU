@@ -37,7 +37,7 @@ public class eat extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.eat);
         Button backig=(Button)findViewById(R.id.bt14);
-        backig.setBackgroundResource(R.drawable.eat1);
+
         backig.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -123,9 +123,9 @@ public class eat extends AppCompatActivity{
                                     SimpleAdapter listItemAdapter = new SimpleAdapter(context,map,//数据源
                                             R.layout.eat_store_allview,//ListItem的XML实现
                                             //动态数组与ImageItem对应的子项
-                                            new String[] {"editText10","eatAdapterImage","eatAdapterText1", "eatAdapterText2","eatAdapterText3"},
+                                            new String[] {"eatAdapterImage","eatAdapterText1", "eatAdapterText2","eatAdapterText3"},
                                             //ImageItem的XML文件里面的一个ImageView,3个TextView ID
-                                            new int[] {R.id.editText10,R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
+                                            new int[] {R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
                                     );
                                     listAll.setAdapter(listItemAdapter);
 
@@ -244,9 +244,9 @@ public class eat extends AppCompatActivity{
                                     SimpleAdapter listItemAdapter = new SimpleAdapter(context,map,//数据源
                                             R.layout.eat_store_allview,//ListItem的XML实现
                                             //动态数组与ImageItem对应的子项
-                                            new String[] {"editText10","eatAdapterImage","eatAdapterText1", "eatAdapterText2","eatAdapterText3"},
+                                            new String[] {"eatAdapterImage","eatAdapterText1", "eatAdapterText2","eatAdapterText3"},
                                             //ImageItem的XML文件里面的一个ImageView,3个TextView ID
-                                            new int[] {R.id.editText10,R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
+                                            new int[] {R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
                                     );
                                     listAll.setAdapter(listItemAdapter);
 
@@ -371,9 +371,9 @@ public class eat extends AppCompatActivity{
                                     SimpleAdapter listItemAdapter = new SimpleAdapter(context,map,//数据源
                                             R.layout.eat_store_allview,//ListItem的XML实现
                                             //动态数组与ImageItem对应的子项
-                                            new String[] {"editText10","eatAdapterImage","eatAdapterText1", "eatAdapterText2","eatAdapterText3"},
+                                            new String[] {"eatAdapterImage","eatAdapterText1", "eatAdapterText2","eatAdapterText3"},
                                             //ImageItem的XML文件里面的一个ImageView,3个TextView ID
-                                            new int[] {R.id.editText10,R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
+                                            new int[] {R.id.eatAdapterImage,R.id.eatAdapterText1,R.id.eatAdapterText2,R.id.eatAdapterText3}
                                     );
                                     listAll.setAdapter(listItemAdapter);
 

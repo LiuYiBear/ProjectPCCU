@@ -42,7 +42,6 @@ public class traffic_allbus_data_mylistview extends AsyncTask<URL, Void, String>
     protected String doInBackground(URL... urls) {
         Log.d("TAG", "doIn函式~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         //以下開始製作POST分類按鈕功能
-
         //新增
         BufferedReader reader = null;//取得輸入類別
         StringBuilder StringBuilder;//表示可變動的字元字串
@@ -78,8 +77,6 @@ public class traffic_allbus_data_mylistview extends AsyncTask<URL, Void, String>
         super.onPostExecute(result);
         loading.dismiss();
         taskListener.onFinished(result);
-
-
     }
     @Override
     protected void onCancelled(String result) {

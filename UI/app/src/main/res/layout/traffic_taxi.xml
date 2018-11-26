@@ -21,7 +21,7 @@
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="479dp"
-            android:text="計程車資料" />
+            android:text="計程車資料  大都會車隊 55178 志英 55102 臺灣大車隊 5568" />
 
     </LinearLayout>
 

@@ -21,8 +21,7 @@ import org.json.JSONObject;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Timer;
-import java.util.TimerTask;
+
 
 
 public class traffic_allbus extends AppCompatActivity {
