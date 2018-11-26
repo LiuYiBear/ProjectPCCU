@@ -10,6 +10,7 @@ public class set_about extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ThemeUtil.setTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_about);
 

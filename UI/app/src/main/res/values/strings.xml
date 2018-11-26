@@ -1,9 +1,18 @@
 <resources>
+
     <string name="app_name">PCCU</string>
-    <string name="text_light">預設</string>
-    <string name="text_dark">黑色</string>
-    <string name="text_intent"></string>
+    <string name="text_light">爽朗</string>
+    <string name="text_dark">明亮</string>
+    <string name="text_pink">粉色</string>
+    <string name="text_intent">跳转</string>
     <string name="text_intent_light"></string>
     <string name="text_intent_drak"></string>
+    <string name="title_activity_test1">test1</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu_test">menu_test</string>
 </resources>
 

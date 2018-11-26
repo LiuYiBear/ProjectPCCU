@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#5a73ff</color>
+    <color name="colorPrimaryDark">#5469ef</color>
+    <color name="colorAccent">#b500ec</color>
+    <color name="color_primary">#ff333333</color>
+    <color name="color_primary_dark">#ff222222</color>
+    <color name="color_bg_main_drak">#ff333333</color>
+    <color name="color_bg_main_light">#feffb6</color>
+
+    <color name="color_primary_pinktitle">#faff6d</color>
+    <color name="color_primary_pink">#ffdede</color>
+    <color name="color_bg_main_pink">#ffbdc0</color>
+
+
+    <color name="colortext">#383fff</color>
+    <color name="colorPrimaryDark2">#ffd6da</color>
+    <color name="colorPrimary2">#fff8b0</color>
+    <color name="colorPrimaryDark3">#ed7be5ff</color>
+    <color name="colorPrimary3">#00803d</color>
+    //
+    <color name="color_white">#FFF</color>
+    <color name="color_black">#000</color>
+
+</resources>

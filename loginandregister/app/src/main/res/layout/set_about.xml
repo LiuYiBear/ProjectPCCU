@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/color_bg_main"
+    tools:context="com.example.user.myapplication.set_about">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/color_bg_main"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button20"
+            style="?attr/second_button_style"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:text="回到上一頁" />
+
+        <TextView
+            android:id="@+id/textView2"
+            style="?attr/text_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="程式開發人員 : 劉逸、朱芷萱、張易誠、陳庭萱
+食的開發人員 : 劉逸
+行的開發人員 : 朱芷萱
+育樂的開發人員 : 陳庭萱
+設定的開發人員 : 張易誠
+程式UI設計 : 劉逸、朱芷萱、張易誠、陳庭萱"
+            android:textSize="19.5dp" />
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

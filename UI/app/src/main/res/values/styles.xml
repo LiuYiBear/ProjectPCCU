@@ -6,44 +6,111 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="color_bg_main">#feffb6</item>
+        <item name="color_bg_main">@drawable/backgroundcolor</item>
         <item name="text_style">@style/Text_light_style</item>
         <item name="second_text_style">@style/second_text_style_light</item>
+        <item name="second_button_style">@style/second_button_style_light</item>
 
-    </style>
-
-
-    <style name="ThemeLight" parent="AppTheme">
-
-    </style>
+    </style><!--主題亮的背景顏色-->
+    <style name="ThemeLight" parent="AppTheme"></style>
+    <style name="second_button_style_light">
+        <item name="android:textColor">#0000FF</item>
+        <item name="android:background">@drawable/buttonshape</item>
+        <item name="android:text">@string/text_intent_drak</item>
+    </style><!--主題亮的文字顏色-->
+    <style name="Text_light_style">
+        <item name="android:textColor">#444dff</item>
+        <item name="android:background">@drawable/textshape</item>
+    </style><!--主題亮的顏色-->
+    <style name="second_text_style_light">
+        <item name="android:textColor">@color/color_white</item>
+        <item name="android:background">@drawable/textshape</item>
+        <item name="android:text">@string/text_intent_light</item>
+    </style><!--主題亮的顏色-->
 
     <style name="ThemeDark" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/color_primary</item>
         <item name="colorPrimaryDark">@color/color_primary_dark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="color_bg_main">@color/color_bg_main_drak</item>
+        <item name="color_bg_main">@drawable/backgroundcolor2</item>
+        <item name="text_style">@style/Text_dark_style</item>
+        <item name="second_text_style">@style/second_text_style_dark</item>
+        <item name="second_button_style">@style/second_button_style_dark</item>
+    </style>
+    <style name="Text_dark_style">
+        <item name="android:textColor">#006633</item>
+        <item name="android:background">@drawable/textshape2</item>
+    </style>
+    <style name="second_text_style_dark">
+        <item name="android:textColor">@color/color_black</item>
+        <item name="android:background">@drawable/textshape2</item>
+        <item name="android:text">@string/text_intent_drak</item>
+    </style>
+    <style name="second_button_style_dark">
+        <item name="android:textColor">#666699</item>
+        <item name="android:background">@drawable/buttonshape2</item>
+        <item name="android:text">@string/text_intent_drak</item>
+    </style>
+
+    <style name="ThemePink" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryDark">@color/color_primary_pink</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="color_bg_main">@color/color_bg_main_pink</item>
         <item name="text_style">@style/Text_dark_style</item>
         <item name="second_text_style">@style/second_text_style_dark</item>
     </style>
 
-    <style name="Text_light_style">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:background">@color/color_black</item>
+
+
+
+
+
+
+
+    <style name="AppThemeLogin" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Text_dark_style">
-        <item name="android:textColor">@color/color_black</item>
-        <item name="android:background">@color/color_white</item>
+    <style name="AppThemeLogin.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeLogin.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppThemeRegist" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary2</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark2</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="second_text_style_light">
-        <item name="android:textColor">@color/color_white</item>
-        <item name="android:background">@color/color_black</item>
-        <item name="android:text">@string/text_intent_light</item>
+
+    <style name="AppThemeRegist.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeRegist.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="AppThemeHome" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary3</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark3</item>
+        <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="second_text_style_dark">
-        <item name="android:textColor">@color/color_black</item>
-        <item name="android:background">@color/color_white</item>
-        <item name="android:text">@string/text_intent_drak</item>
+
+    <style name="AppThemeHome.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppThemeHome.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>

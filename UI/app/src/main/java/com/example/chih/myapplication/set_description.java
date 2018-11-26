@@ -10,6 +10,7 @@ import android.widget.Button;
 public class set_description extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        ThemeUtil.setTheme(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.set_description);
 

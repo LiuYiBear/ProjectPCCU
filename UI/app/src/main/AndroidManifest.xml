@@ -68,10 +68,6 @@
             android:name=".set_usefeedback"
             android:label="set_usefeedback"
             android:parentActivityName=".MainActivity" />
-        <activity
-            android:name=".talk"
-            android:label="talk_data"
-            android:parentActivityName=".MainActivity" />
         <activity android:name=".set_registered" />
         <activity android:name=".set_login" />
     </application>

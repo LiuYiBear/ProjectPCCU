@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/color_bg_main"
+    tools:context="com.example.user.myapplication.MainActivity">
+
+    <Button
+        android:id="@+id/bt10"
+        android:layout_width="95dp"
+        android:layout_height="48dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="53dp"
+        style="?attr/second_button_style"
+        android:text="食"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bt11"
+        android:layout_width="88dp"
+        android:layout_height="47dp"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/bt13"
+        android:layout_toStartOf="@+id/bt13"
+        style="?attr/second_button_style"
+        android:text="行"
+
+        app:layout_constraintEnd_toStartOf="@+id/bt12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt10" />
+
+    <Button
+        android:id="@+id/bt12"
+        android:layout_width="88dp"
+        android:layout_height="49dp"
+        android:layout_alignBottom="@+id/bt11"
+        android:layout_toEndOf="@+id/bt10"
+        android:layout_toRightOf="@+id/bt10"
+        style="?attr/second_button_style"
+        android:text="育樂"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt11"
+        app:layout_constraintTop_toBottomOf="@+id/bt10" />
+
+    <Button
+        android:id="@+id/bt13"
+        style="?attr/second_button_style"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+
+        android:layout_alignLeft="@+id/bt10"
+        android:layout_alignStart="@+id/bt10"
+        android:layout_below="@+id/bt12"
+        android:layout_marginTop="71dp"
+        android:layout_toLeftOf="@+id/bt12"
+
+        android:layout_toStartOf="@+id/bt12"
+        android:text="設定"
+        app:layout_constraintEnd_toStartOf="@+id/bt14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt11" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="54dp"
+        android:text="文化生活圈"
+        style="?attr/text_style"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</RelativeLayout>
