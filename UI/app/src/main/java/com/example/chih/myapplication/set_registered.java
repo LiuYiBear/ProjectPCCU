@@ -28,7 +28,7 @@ public class set_registered extends AppCompatActivity {
     private EditText name,email,password,c_password;
     private Button btn_regist;
     private ProgressBar loading;
-    private static String URL_REGIST = " http://100.76.25.173/android_register_login/register.php";//" http://127.0.0.1/android_register_login/register.php"  //192.168.1.3
+    private static String URL_REGIST = " http://192.168.0.4/android_register_login/register.php";//" http://127.0.0.1/android_register_login/register.php"  //192.168.1.3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
