@@ -28,6 +28,7 @@ public class traffic extends AppCompatActivity {
 
 
 
+
         Button nextig1 =( Button)findViewById(R.id.gotaxi);
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
