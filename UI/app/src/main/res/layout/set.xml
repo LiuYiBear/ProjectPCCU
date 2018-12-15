@@ -25,12 +25,12 @@
 
         <ImageButton
             android:id="@+id/imageButton6"
-            style="?attr/second_button_style"
+            style="@style/Widget.AppCompat.ActionButton.CloseMode"
             android:layout_width="264dp"
-            android:layout_height="wrap_content"
+            android:layout_height="110dp"
             android:layout_gravity="center"
             android:layout_weight="10"
-            app:srcCompat="@drawable/set1" />
+            app:srcCompat="@drawable/setting" />
 
     </LinearLayout>
 
@@ -49,7 +49,7 @@
         <Button
             android:id="@+id/btn_1"
             style="?attr/second_button_style"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
@@ -58,7 +58,7 @@
         <Button
             android:id="@+id/btn_2"
             style="?attr/second_button_style"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
@@ -68,7 +68,7 @@
         <Button
             android:id="@+id/btn_3"
             style="?attr/second_button_style"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginBottom="@dimen/activity_horizontal_margin"
@@ -77,10 +77,10 @@
         <Button
             android:id="@+id/btn_4"
             style="?attr/second_button_style"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="布景" />
+            android:text="背景顏色" />
 
     </LinearLayout>
 
@@ -100,11 +100,12 @@
         <Button
             android:id="@+id/btn_6"
             style="?attr/second_button_style"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:text="登入" />
 
 
     </LinearLayout>
+
 </android.support.constraint.ConstraintLayout>
