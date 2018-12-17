@@ -15,12 +15,13 @@ public class ThemeUtil {
 
         if (isLight ) // 使用布林運算子來判斷背景是哪一種
         {
-            activity.setTheme(R.style.ThemeLight);  //背景亮的
+            activity.setTheme(R.style.ThemeLight);  //背景爽朗 的
         }
         else
         {
-            activity.setTheme(R.style.ThemeDark);  //背景暗的
+            activity.setTheme(R.style.ThemeDark);  //背景明亮的
         }
+
 
 
     }

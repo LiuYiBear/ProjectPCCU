@@ -28,7 +28,7 @@ public class set_registered extends AppCompatActivity {
     private EditText name,email,password,c_password;
     private Button btn_regist;
     private ProgressBar loading;
-    private static String URL_REGIST = " http://192.168.0.4/android_register_login/register.php";//" http://127.0.0.1/android_register_login/register.php"  //192.168.1.3
+    private static String URL_REGIST = " http://192.168.1.3/android_register_login/register.php";//" http://127.0.0.1/android_register_login/register.php"  //192.168.1.3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,9 +44,19 @@ public class set_registered extends AppCompatActivity {
         btn_regist = findViewById(R.id.btn_regist);
 
         btn_regist.setOnClickListener(new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
-                Regist();
+                String mPass = password.getText().toString().trim();
+                String mC_Pass = c_password.getText().toString().trim();
+
+                if (mC_Pass==mPass) {  //檢查第二次密碼是否相同
+                    Regist();
+                } else {
+                    c_password.setError("重新輸入第二次密碼");
+                }
+
             }
         });
     }
@@ -81,7 +91,7 @@ public class set_registered extends AppCompatActivity {
                 new Response.ErrorListener() {   //沒有連結到資料庫
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(set_registered.this, "有錯誤沒有連結到資料庫\n" + error.toString(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(set_registered.this, "有錯誤沒有連結到資料庫或網路\n" + error.toString(), Toast.LENGTH_LONG).show();
                         loading.setVisibility(View.GONE);//loading.setVisibility(View.VISIBLE);
                         btn_regist.setVisibility(View.VISIBLE);//btn_regist.setVisibility(View.GONE);
                     }

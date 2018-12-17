@@ -35,7 +35,7 @@ public class set_backgroundtheme extends AppCompatActivity implements View.OnCli
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {  //使用switch來換背景
+        switch (view.getId()) {  //使用switch來換背景因為用布林值判斷所以只有ture跟false
             case R.id.tv_light:
                 PrefsUtils.write(this, Config.THEME_CONFIG, true);
                 ThemeUtil.reCreate(this);
