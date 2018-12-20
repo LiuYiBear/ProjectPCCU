@@ -16,6 +16,8 @@ public class traffic_taxi extends AppCompatActivity {
         Button button1=(Button) findViewById(R.id.back);
 
         Button nextig1 =( Button)findViewById(R.id.back);
+        nextig1.setBackgroundResource(R.drawable.trafficback);
+
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

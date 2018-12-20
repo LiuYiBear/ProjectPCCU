@@ -20,6 +20,6 @@
     <color name="colorPrimary3">#00803d</color>
     //
     <color name="color_white">#FFF</color>
-    <color name="color_black">#000</color>
+    <color name="color_black">#000000</color>
 
 </resources>

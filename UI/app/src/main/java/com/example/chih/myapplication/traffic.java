@@ -16,7 +16,7 @@ public class traffic extends AppCompatActivity {
 
 
         Button backig=(Button) findViewById(R.id.bt14);
-        backig.setBackgroundResource(R.drawable.traffic1);//title 置換圖片功能
+        backig.setBackgroundResource(R.drawable.mainschoolbus);//title 置換圖片功能
         backig.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){

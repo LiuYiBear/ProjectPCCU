@@ -3,6 +3,7 @@ package com.example.chih.myapplication;
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -109,9 +110,14 @@ public class eat extends AppCompatActivity{
                                             String store_address = jsonObject.getString("store_address");
                                             String store_businesshours = jsonObject.getString("store_businesshours");
                                             Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
+                                            String store_photo_path = jsonObject.getString("store_photo_path");
+                                            String uri = "@drawable/" + store_photo_path;
+                                            int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+                                            item.put("eatAdapterImage",String.valueOf(imageResource));//图像资源的ID//此為替代上面
+
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
                                             item.put("editText10", store_id.toString());
-                                            item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
+
                                             item.put("eatAdapterText1", store_name);
                                             item.put("eatAdapterText2", store_phone);
                                             item.put("eatAdapterText3", store_address);
@@ -230,9 +236,12 @@ public class eat extends AppCompatActivity{
                                             String store_address = jsonObject.getString("store_address");
                                             String store_businesshours = jsonObject.getString("store_businesshours");
                                             Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
+                                            String store_photo_path = jsonObject.getString("store_photo_path");
+                                            String uri = "@drawable/" + store_photo_path;
+                                            int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+                                            item.put("eatAdapterImage",String.valueOf(imageResource));//图像资源的ID//此為替代上面
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
                                             item.put("editText10", store_id.toString());
-                                            item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
                                             item.put("eatAdapterText1", store_name);
                                             item.put("eatAdapterText2", store_phone);
                                             item.put("eatAdapterText3", store_address);
@@ -357,9 +366,12 @@ public class eat extends AppCompatActivity{
                                             String store_address = jsonObject.getString("store_address");
                                             String store_businesshours = jsonObject.getString("store_businesshours");
                                             Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
+                                            String store_photo_path = jsonObject.getString("store_photo_path");
+                                            String uri = "@drawable/" + store_photo_path;
+                                            int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+                                            item.put("eatAdapterImage",String.valueOf(imageResource));//图像资源的ID//此為替代上面
 //                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
                                             item.put("editText10", store_id);
-                                            item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
                                             item.put("eatAdapterText1", store_name);
                                             item.put("eatAdapterText2", store_phone);
                                             item.put("eatAdapterText3", store_address);
@@ -482,9 +494,14 @@ public class eat extends AppCompatActivity{
                                 String store_phone = jsonObject.getString("store_phone");
                                 String store_address = jsonObject.getString("store_address");
                                 String store_businesshours = jsonObject.getString("store_businesshours");
-                                Log.d("TAG", "store_name:"+store_name+ "store_phone:" +store_phone);
-//                              item.put("eatAdapterImage", store_id.toString());//图像资源的ID
-                                item.put("eatAdapterImage",String.valueOf(R.drawable.red));//图像资源的ID//此為替代上面
+
+                                String store_photo_path = jsonObject.getString("store_photo_path");
+                                String uri = "@drawable/" + store_photo_path;
+                                int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+                                item.put("eatAdapterImage",String.valueOf(imageResource));//图像资源的ID//此為替代上面
+
+                                Log.d("TAG", "store_name:"+store_name+ "store_phone:......................." +store_phone+"store_photo_path:"+store_photo_path+"  id:"+String.valueOf(imageResource));
+
                                 item.put("eatAdapterText1", store_name);
                                 item.put("eatAdapterText2", store_phone);
                                 item.put("eatAdapterText3", store_address);

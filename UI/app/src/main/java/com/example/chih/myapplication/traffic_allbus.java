@@ -33,7 +33,9 @@ public class traffic_allbus extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.traffic_allbus);
 
+
         Button nextig1 =( Button)findViewById(R.id.back);
+        nextig1.setBackgroundResource(R.drawable.trafficback);
         nextig1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

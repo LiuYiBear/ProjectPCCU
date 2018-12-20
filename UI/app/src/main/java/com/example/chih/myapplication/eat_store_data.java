@@ -1,11 +1,13 @@
 package com.example.chih.myapplication;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class eat_store_data extends AppCompatActivity {
@@ -38,6 +40,12 @@ public class eat_store_data extends AppCompatActivity {
         TextView storeName=(TextView)findViewById(R.id.storeName);
         TextView storePhone=(TextView)findViewById(R.id.storePhone);
         TextView storeAddress=(TextView)findViewById(R.id.storeAddress);
+
+        ImageView imageView1 = (ImageView) findViewById(R.id.storeImage);
+        String uri = "@drawable/" + store_photo_path;
+        int imageResource = getResources().getIdentifier(uri, null, getPackageName());
+        Drawable image = getResources().getDrawable(imageResource);
+        imageView1.setImageDrawable(image);
 
         storeName.setText(store_name);
         storePhone.setText(store_phone);

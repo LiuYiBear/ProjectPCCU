@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/back"
     android:orientation="vertical">
+
 
     <include
         android:id="@+id/main1"
@@ -32,6 +34,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="車號"
+            android:textColor="@color/color_black"
             android:textSize="18sp" />
 
         <TextView
@@ -41,6 +44,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="到達時間"
+            android:textColor="@color/color_black"
             android:textSize="18sp" />
 
         <TextView
@@ -50,6 +54,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="上下山"
+            android:textColor="@color/color_black"
             android:textSize="18sp" />
 
     </LinearLayout>

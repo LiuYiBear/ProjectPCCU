@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/eatbackground"
     android:orientation="vertical">
 
     <include
@@ -34,8 +35,13 @@
             <ImageView
                 android:id="@+id/storeImage"
                 android:layout_width="112dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/red" />
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="15dp"
+                android:textColor="@color/color_black"
+                android:layout_height="wrap_content" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -47,6 +53,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:text="TextView"
+                    android:textColor="@color/color_black"
                     android:textSize="26sp" />
 
                 <TextView
@@ -54,12 +61,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="32dp"
                     android:text="TextView"
+                    android:textColor="@color/color_black"
                     android:textSize="15sp" />
 
                 <TextView
                     android:id="@+id/storeAddress"
                     android:layout_width="270dp"
                     android:layout_height="50dp"
+                    android:textColor="@color/color_black"
                     android:text="TextView"
                     android:textSize="15sp" />
 
@@ -78,11 +87,6 @@
             android:layout_height="80dp"
             android:gravity="center">
 
-            <Button
-                android:id="@+id/storeMenu"
-                android:layout_width="wrap_content"
-                android:layout_height="38dp"
-                android:text="菜單" />
         </TableRow>
 
     </TableLayout>
