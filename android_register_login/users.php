@@ -1,7 +1,7 @@
 <?php
 header ( "Content-type:text/html;charset=utf-8" ); 
 $insertSQL=isset($_POST["S1"]);
-$con = mysqli_connect("localhost","jack","0000","users");//("伺服器名稱","使用者帳號","使用者密碼","資料庫名稱")
+$con = mysqli_connect("localhost","root","0000","pccu_project");//("伺服器名稱","使用者帳號","使用者密碼","資料庫名稱")
     if($con){
 
         echo"登入成功";//(登入成功就輸出ok)

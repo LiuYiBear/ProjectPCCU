@@ -31,7 +31,7 @@ public class set_login extends AppCompatActivity {
     private Button btn_login;
     private TextView link_regist;
     private ProgressBar loading;
-    private static String URL_LOGIN = "http://192.168.1.3/android_register_login/login.php"; // 連接登入的php檔案  // "http://127.0.0.1/android_register_login/login.php"
+    private static String URL_LOGIN = "http://192.168.0.101/android_register_login/login.php"; // 連接登入的php檔案  // "http://127.0.0.1/android_register_login/login.php"
 
 
 

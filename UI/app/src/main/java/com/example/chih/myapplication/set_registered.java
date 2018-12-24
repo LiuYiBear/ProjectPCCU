@@ -2,6 +2,7 @@ package com.example.chih.myapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,7 +29,7 @@ public class set_registered extends AppCompatActivity {
     private EditText name,email,password,c_password;
     private Button btn_regist;
     private ProgressBar loading;
-    private static String URL_REGIST = " http://192.168.1.3/android_register_login/register.php";//" http://127.0.0.1/android_register_login/register.php"  //192.168.1.3
+    private static String URL_REGIST = " http://192.168.0.101/android_register_login/register.php";//" http://127.0.0.1/android_register_login/register.php"  //192.168.1.3
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +52,7 @@ public class set_registered extends AppCompatActivity {
                 String mPass = password.getText().toString().trim();
                 String mC_Pass = c_password.getText().toString().trim();
 
-                if (mC_Pass==mPass) {  //檢查第二次密碼是否相同
+                if (mPass.equals(mC_Pass)) {  //檢查第二次密碼是否相同
                     Regist();
                 } else {
                     c_password.setError("重新輸入第二次密碼");

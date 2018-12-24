@@ -37,8 +37,8 @@ public class set_information extends AppCompatActivity {
     private Button btn_logout,btn_home;
     SessionManger sessionManger;//  p4加入的
     String getId;
-    private static String URL_READ = " http://192.168.1.3/android_register_login/read_detail.php";// 連結php 讀取資料的檔案   http://127.0.0.1/android_register_login/read_detail.php
-    private static String URL_EDIT = "http://192.168.1.3/android_register_login/edit_detail.php";//連結php 編輯資料的檔案   http://127.0.0.1/android_register_login/edit_detail.php
+    private static String URL_READ = " http://192.168.0.101/android_register_login/read_detail.php";// 連結php 讀取資料的檔案   http://127.0.0.1/android_register_login/read_detail.php
+    private static String URL_EDIT = "http://192.168.0.101/android_register_login/edit_detail.php";//連結php 編輯資料的檔案   http://127.0.0.1/android_register_login/edit_detail.php
     private Menu action;
 
     @Override
