@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/color_bg_main">
 
     <LinearLayout
+        android:id="@+id/linearLayout6"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="59dp"
         android:orientation="vertical">
 
         <Button
             android:id="@+id/button"
+            style="?attr/second_button_style"
             android:layout_width="80dp"
             android:layout_height="wrap_content"
-            style="?attr/second_button_style"
             android:text="回到上一頁" />
 
-        <TextView
-            android:id="@+id/textView2"
-            style="?attr/text_style"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="APP說明:
-本APP把目標放在手機中不可或缺的應用程式，專門為中國文化大學的師生設計出一款包含了吃、行、育樂等資料的手機應用程式。將以文化為中心的生活圈融入其中。"
-            android:textSize="24dp" />
     </LinearLayout>
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/textView2"
+        style="?attr/text_style"
+        android:layout_width="368dp"
+        android:layout_height="191dp"
+        android:layout_marginBottom="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="56dp"
+        android:text="APP說明:\n本APP把目標放在手機中不可或缺的應用程式，專門為中國文化大學的師生設計出一款包含了吃、行、育樂等資料的手機應用程式。將以文化為中心的生活圈融入其中。"
+        android:textSize="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+
+</android.support.constraint.ConstraintLayout>
